@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+<title>KISTA — Ruleta de Tareas</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="KISTA">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#D80300">
+<link rel="icon" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<style>
+  :root{
+    --rojo: #D80300;
+    --rojo-oscuro: #A80200;
+    --rojo-claro: #FCEBEB;
+    --rosa: #F4B8B8;
+    --fondo1: #FFF8F8;
+    --fondo2: #FCE9E9;
+    --texto-oscuro: #2B2B2E;
+    --texto-medio: #6b6b70;
+    --texto-claro: #a4a4a8;
+    --blanco: #ffffff;
+    --sombra: 0 10px 30px rgba(216,3,0,0.18);
+    --radio: 22px;
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color: transparent;}
+  html,body{height:100%;}
+  body{
+    margin:0;
+    min-height:100vh;
+    font-family: 'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: linear-gradient(160deg, var(--fondo2) 0%, var(--fondo1) 45%, var(--fondo2) 100%);
+    color: var(--texto-oscuro);
+    display:flex;
+    justify-content:center;
+    overflow-x:hidden;
+    position:relative;
+  }
+  .blob{
+    position:fixed;
+    border-radius:50%;
+    filter: blur(50px);
+    opacity:0.55;
+    z-index:0;
+    pointer-events:none;
+  }
+  .blob.tl{
+    width:260px;height:260px;
+    background: radial-gradient(circle, var(--rosa), transparent 70%);
+    top:-80px; left:-80px;
+  }
+  .blob.br{
+    width:320px;height:320px;
+    background: radial-gradient(circle, var(--rojo-claro), transparent 70%);
+    bottom:-100px; right:-100px;
+  }
+  .app{
+    position:relative;
+    z-index:1;
+    width:100%;
+    max-width:460px;
+    min-height:100vh;
+    padding: 22px 20px 40px;
+    display:flex;
+    flex-direction:column;
+  }
+
+  /* ===== Header / marca ===== */
+  .brand{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    margin-bottom: 18px;
+  }
+  .brand-row{
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .brand-flag{
+    width:34px; height:34px;
+    flex-shrink:0;
+  }
+  .brand-word{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:900;
+    font-size:32px;
+    letter-spacing:1px;
+    color: var(--rojo);
+  }
+  .brand-sub{
+    font-size:11px;
+    color: var(--texto-medio);
+    letter-spacing:0.5px;
+    margin-top:2px;
+  }
+  .logo-frame{
+    width:100%;
+    max-width:270px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 14px 18px;
+    background: linear-gradient(135deg, var(--rojo-claro), var(--fondo1));
+    box-shadow: var(--sombra);
+    border-radius: 18px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .brand-logo{
+    width:100%;
+    height:auto;
+    display:block;
+  }
+
+  /* ===== Contenedor de pasos ===== */
+  .stage{
+    position:relative;
+    flex:1;
+    display:flex;
+    flex-direction:column;
+  }
+  .step{
+    display:none;
+    flex-direction:column;
+    animation: stepIn 0.4s ease both;
+  }
+  .step.active{ display:flex; }
+  @keyframes stepIn{
+    from{ opacity:0; transform:translateY(14px); }
+    to{ opacity:1; transform:translateY(0); }
+  }
+  .step-title{
+    font-size:22px;
+    font-weight:800;
+    text-align:center;
+    margin: 4px 0 2px;
+  }
+  .step-subtitle{
+    font-size:13.5px;
+    color: var(--texto-medio);
+    text-align:center;
+    margin-bottom: 22px;
+  }
+
+  /* ===== Paso 1: días ===== */
+  .dias-display{
+    text-align:center;
+    margin: 6px 0 22px;
+  }
+  .dias-num{
+    font-size:72px;
+    font-weight:900;
+    color: var(--texto-oscuro);
+    line-height:1;
+    display:inline-block;
+    transition: transform .18s ease;
+  }
+  .dias-num.bump{ animation: bump .28s ease; }
+  @keyframes bump{
+    0%{ transform: scale(1); }
+    45%{ transform: scale(1.18); }
+    70%{ transform: scale(0.95); }
+    100%{ transform: scale(1); }
+  }
+  .dias-label{
+    font-size:13px;
+    color: var(--texto-medio);
+    margin-top:4px;
+  }
+  input[type="range"]{
+    -webkit-appearance:none;
+    appearance:none;
+    width:100%;
+    height:8px;
+    border-radius:99px;
+    background: var(--rosa);
+    outline:none;
+    margin: 10px 0 20px;
+  }
+  input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance:none;
+    width:26px;height:26px;
+    border-radius:50%;
+    background: var(--rojo);
+    border:4px solid var(--blanco);
+    box-shadow: 0 2px 8px rgba(216,3,0,0.4);
+    cursor:pointer;
+  }
+  input[type="range"]::-moz-range-thumb{
+    width:26px;height:26px;
+    border-radius:50%;
+    background: var(--rojo);
+    border:4px solid var(--blanco);
+    box-shadow: 0 2px 8px rgba(216,3,0,0.4);
+    cursor:pointer;
+  }
+  .quick-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:10px;
+    margin-bottom:26px;
+  }
+
+  .ahorro-card{
+    background: linear-gradient(135deg, var(--rojo-claro), var(--blanco));
+    border: 1.5px solid var(--rosa);
+    border-radius: 18px;
+    padding: 18px 16px;
+    text-align:center;
+    margin-bottom: 26px;
+  }
+  .ahorro-card-title{
+    font-size:13px;
+    font-weight:700;
+    color: var(--texto-medio);
+    margin-bottom:6px;
+  }
+  .ahorro-card-total{
+    font-size:34px;
+    font-weight:900;
+    color: var(--rojo);
+    line-height:1.1;
+    margin-bottom:8px;
+  }
+  .ahorro-card-sub{
+    font-size:11.5px;
+    color: var(--texto-claro);
+    line-height:1.4;
+  }
+  .quick-btn{
+    padding:12px 4px;
+    border-radius:14px;
+    border: 1.5px solid var(--rosa);
+    background: var(--blanco);
+    color: var(--texto-oscuro);
+    font-weight:700;
+    font-size:14px;
+    cursor:pointer;
+    transition: all .15s ease;
+  }
+  .quick-btn:active{ transform: scale(0.95); }
+  .quick-btn.selected{
+    background: var(--rojo);
+    border-color: var(--rojo);
+    color:#fff;
+    box-shadow: var(--sombra);
+  }
+
+  /* ===== Botones generales ===== */
+  .btn{
+    border:none;
+    border-radius:16px;
+    font-weight:800;
+    font-size:16px;
+    padding:16px;
+    cursor:pointer;
+    transition: transform .12s ease, background .15s ease, opacity .15s ease;
+    width:100%;
+  }
+  .btn:active{ transform: scale(0.97); }
+  .btn-primary{
+    background: var(--rojo);
+    color:#fff;
+    box-shadow: var(--sombra);
+  }
+  .btn-primary:hover{ background: var(--rojo-oscuro); }
+  .btn-primary:disabled{
+    background: #f2b9bd;
+    box-shadow:none;
+    cursor:not-allowed;
+    opacity:0.8;
+  }
+  .btn-ghost{
+    background: transparent;
+    color: var(--texto-medio);
+    border: 1.5px solid var(--rosa);
+    font-weight:700;
+  }
+  .btn-row{
+    display:flex;
+    gap:10px;
+    margin-top:auto;
+    padding-top:18px;
+  }
+  .btn-row .btn-ghost{ flex:0 0 34%; }
+  .btn-row .btn-primary{ flex:1; }
+
+  /* ===== Paso 2: categorías ===== */
+  .cat-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:10px;
+    margin-bottom: 10px;
+  }
+  .cat-card{
+    background: var(--blanco);
+    border: 2px solid var(--rosa);
+    border-radius: 16px;
+    padding: 12px 6px;
+    text-align:center;
+    cursor:pointer;
+    transition: transform .15s ease, border-color .15s ease, background .15s ease;
+  }
+  .cat-card:active{ transform: scale(0.96); }
+  .cat-card.selected{
+    border-color: var(--rojo);
+    background: var(--rojo-claro);
+    transform: scale(1.03);
+  }
+  .cat-card .icon{
+    font-size:22px;
+    display:block;
+    margin-bottom:4px;
+  }
+  .cat-card .cat-name{
+    font-weight:800;
+    font-size:12px;
+    line-height:1.2;
+  }
+
+  /* ===== Paso 3: jugar ===== */
+  .play-tag{
+    background: var(--blanco);
+    border:1.5px solid var(--rosa);
+    border-radius:99px;
+    padding:8px 16px;
+    font-size:12.5px;
+    color: var(--texto-medio);
+    text-align:center;
+    align-self:center;
+    margin-bottom:26px;
+    font-weight:600;
+  }
+  .play-tag b{ color: var(--rojo); }
+
+  .dias-restantes{
+    text-align:center;
+    font-size:12px;
+    color: var(--texto-claro);
+    margin: -14px 0 20px;
+  }
+  .dias-restantes b{
+    color: var(--rojo);
+    font-weight:800;
+  }
+
+  .regla-prenda{
+    background: var(--rojo-claro);
+    border: 1px solid var(--rosa);
+    border-radius: 14px;
+    padding: 10px 14px;
+    font-size:11.5px;
+    color: var(--texto-medio);
+    line-height:1.4;
+    text-align:center;
+    margin-bottom:22px;
+  }
+  .regla-prenda b{ color: var(--rojo); }
+
+  /* ===== Cartel final: abrir la alcancía ===== */
+  .alcancia-overlay{
+    position:fixed;
+    inset:0;
+    background: rgba(43,43,46,0.55);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:50;
+    padding:24px;
+  }
+  .alcancia-overlay.show{
+    display:flex;
+    animation: overlayIn .25s ease both;
+  }
+  @keyframes overlayIn{
+    from{ opacity:0; }
+    to{ opacity:1; }
+  }
+  .alcancia-card{
+    background: var(--blanco);
+    border-radius: var(--radio);
+    padding: 30px 26px;
+    max-width: 340px;
+    width:100%;
+    text-align:center;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    animation: alcanciaPop .45s cubic-bezier(.36,1.7,.4,1) both;
+  }
+  @keyframes alcanciaPop{
+    0%{ transform: scale(0.7); opacity:0; }
+    60%{ transform: scale(1.08); opacity:1; }
+    100%{ transform: scale(1); }
+  }
+  .alcancia-emoji{
+    font-size:56px;
+    margin-bottom:10px;
+    display:block;
+  }
+  .alcancia-title{
+    font-size:20px;
+    font-weight:900;
+    color: var(--rojo);
+    margin-bottom:8px;
+    line-height:1.3;
+  }
+  .alcancia-text{
+    font-size:14px;
+    color: var(--texto-medio);
+    margin-bottom:22px;
+    line-height:1.4;
+  }
+
+  .roulette-wrap{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    flex:1;
+    gap:26px;
+  }
+  .num-display{
+    font-size:96px;
+    font-weight:900;
+    color: var(--texto-oscuro);
+    line-height:1;
+    min-height:110px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .num-display.spring{ animation: spring .5s cubic-bezier(.36,1.7,.4,1) both; }
+  @keyframes spring{
+    0%{ transform: scale(0.5); opacity:0; }
+    60%{ transform: scale(1.15); opacity:1; }
+    100%{ transform: scale(1); }
+  }
+
+  .tirar-btn{
+    width:150px; height:150px;
+    border-radius:50%;
+    background: radial-gradient(circle at 35% 30%, var(--rojo-oscuro), var(--rojo) 70%);
+    color:#fff;
+    border:none;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+    font-weight:800;
+    font-size:16px;
+    letter-spacing:0.5px;
+    box-shadow: 0 14px 34px rgba(216,3,0,0.38);
+    cursor:pointer;
+    transition: transform .15s ease;
+  }
+  .tirar-btn .dado{ font-size:38px; }
+  .tirar-btn:hover{ transform: scale(1.05); }
+  .tirar-btn:active{ transform: scale(0.94); }
+  .tirar-btn:disabled{ opacity:0.6; cursor:not-allowed; transform:none; }
+
+  /* Tarjeta 3D */
+  .card-scene{
+    perspective: 1200px;
+    width: 260px;
+    height: 320px;
+    display:none;
+  }
+  .card-scene.show{ display:block; animation: cardAppear .35s ease both; }
+  @keyframes cardAppear{
+    from{ opacity:0; transform: translateY(18px) scale(0.9); }
+    to{ opacity:1; transform: translateY(0) scale(1); }
+  }
+  .card-inner{
+    position:relative;
+    width:100%; height:100%;
+    transition: transform .6s cubic-bezier(.4,.2,.2,1);
+    transform-style: preserve-3d;
+    cursor:pointer;
+  }
+  .card-inner.flipped{ transform: rotateY(180deg); }
+  .card-face{
+    position:absolute;
+    inset:0;
+    border-radius:20px;
+    backface-visibility:hidden;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:26px;
+    text-align:center;
+  }
+  .card-front{
+    background: linear-gradient(150deg, var(--rojo), var(--rojo-oscuro));
+    color:#fff;
+    box-shadow: var(--sombra);
+  }
+  .card-front .prenda-word{
+    font-size:28px;
+    font-weight:900;
+    letter-spacing:1px;
+    margin-bottom:10px;
+  }
+  .card-front .tap-hint{
+    font-size:12.5px;
+    opacity:0.85;
+  }
+  .card-back{
+    background: var(--blanco);
+    border:2px solid var(--rosa);
+    transform: rotateY(180deg);
+    box-shadow: var(--sombra);
+  }
+  .card-back .prenda-text{
+    font-size:17px;
+    font-weight:700;
+    line-height:1.4;
+    color: var(--texto-oscuro);
+  }
+  .card-back .prenda-label{
+    font-size:11px;
+    color: var(--rojo);
+    font-weight:800;
+    letter-spacing:1.5px;
+    margin-bottom:10px;
+  }
+
+  .play-actions{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    width:100%;
+    margin-top: 6px;
+  }
+  .play-actions.hidden{ display:none; }
+
+  @media (max-width:360px){
+    .num-display{ font-size:78px; }
+    .tirar-btn{ width:130px; height:130px; }
+    .card-scene{ width:220px; height:280px; }
+  }
+</style>
+</head>
+<body>
+<div class="blob tl"></div>
+<div class="blob br"></div>
+
+<div class="app">
+
+  <div class="brand">
+    <div class="logo-frame"><img class="brand-logo" src="data:image/png;base64,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" alt="KISTA - Empresa Juvenil de DESEM JA"></div>
+  </div>
+
+  <div class="stage" id="stage">
+    <!-- Los 3 pasos se insertan por JS -->
+  </div>
+
+</div>
+<script>
+const PRENDAS = {"ninos": ["Tender la cama.", "Guardar los juguetes.", "Ordenar tu habitación.", "Servirle un vaso de agua o merienda a un adulto o hermano cuando se note cansado.", "Levantar la mesa después de comer.", "Regar las plantas.", "Dar de comer a las mascotas.", "Ayudar a doblar la ropa.", "Sacar la basura (si es seguro hacerlo).", "Limpiar el polvo de los muebles.", "Revisar que tengas un lápiz o borrador extra en la mochila por si a algún compañero le falta.", "Limpiar los zapatos.", "Ayudar a cocinar con la supervisión de un adulto.", "Agarrar un trapo y preguntarle a alguien de la casa si necesita ayuda para limpiar.", "Guardar la ropa limpia.", "Organizar los cajones de la ropa.", "Dibuja algo en la espalda de mamá/papá con el dedo y tiene que adivinar qué es en menos de 15 segundos.", "Darle un beso a un familiar que tengas cerca.", "Abrazar a uno de tus padres.", "Hacer los deberes.", "Ayudar a tus papás sin que te lo pidan. Al día siguiente podés poner 10 pesos más en la alcancía.", "Imitar una profesión solo con gestos hasta que alguien adivine.", "Responder 3 preguntas rápidas sin decir “si”, “no”, “este” o “bueno”.", "Dibujar a mamá o papá en 20 segundos sin levantar el lápiz del papel.", "Decir 5 palabras seguidas donde cada una empiece con la última letra de la anterior.", "No elegir el postre ese día.", "Averiguar cuál fue el primer trabajo que tuvo papá o mamá y qué hacía exactamente en él.", "Usar 3 objetos cercanos para crear una figura o monstruo divertido", "Pedir contar un cuento en la noche", "Jugar un juego de mesa", "Dibujar el boceto de un nuevo billete o moneda inventada en 45 segundos", "Decirle a un familiar o amigo una razón específica por la cual valoras su compañía.", "Decir 5 palabras amables (ejemplo: abrazo, bondad, cariño) en orden alfabético.", "Leer un cuento.", "Dibujar a tu familia.", "Formar la sombra de un animal en la pared usando solo la sombra de los dedos", "Ordenar todos sus juguetes en 5 minutos.", "Decir una frase de apoyo a un compañero usando solo palabras que comiencen con la vocal A o E.", "Contar un chiste sano y divertido a alguien que se vea triste o estresado para sacarle una sonrisa.", "Hacer una mueca graciosa.", "Aplaudir 20 veces.", "Dar tres vueltas sobre sí mismo.", "Realizar un estiramiento suave e invitar a un compañero a hacer una pausa activa de respiración juntos.", "Hacer equilibrio en un pie dándole la mano a un compañero para no caerse ninguno.", "Buscar un objeto de un color llamativo.", "Guiar a un compañero con los ojos cerrados dándole indicaciones claras de voz durante 5 pasos.", "Saltar en un pie cinco veces.", "Preguntarle a la persona que cocinó qué fue lo que más le costó preparar y darle las gracias por la comida.", "Contar en voz alta cuántos gestos de ayuda o sonrisas ves en el salón durante el recreo.", "Dibujar un mapa del tesoro donde el \"tesoro\" final sea un abrazo o una buena acción.", "Realizar un favor al día siguiente sin esperar nada a cambio.", "Decir \"gracias\" al personal de limpieza, cocina o transporte escolar por el trabajo que realizan.", "Practicar las tablas", "Prestar un libro a un compañero", "Ayudar a un compañero o hermano a guardar sus juguetes cuando termine de jugar.", "Acomodar el espacio de lectura o rincón de juegos para que todos lo encuentren lindo.", "Hacer el \"Reto de 1 minuto\": juntar entre todos los objetos fuera de lugar antes de que termine el tiempo.", "Hacele una boca y ojos de papel a tu alcancía.", "Ayudar a limpiar el vehículo de la casa.", "Recitar un poema corto o rima inventada frente a alguien.", "Inventar una canción en grupo sobre el compañerismo y cantarla juntos.", "Invitar a jugar a tu mamá o papá a jugar a la pelota.", "Dejar una nota secreta con una frase de tu mamá, papá, hermano/a en su mesa.", "Ser el \"Guardián de la Energía\" por un día y apagar luces en espacios que nadie esté usando.", "Recordarle amable y respetuosamente a alguien que cierre bien la canilla para no desperdiciar agua.", "Dibujar aquello para lo que están ahorrando.", "Elaborar un juego sencillo con cartón o papel para jugarlo con un familiar.", "Ofrecerse a llevar una manta o almohadón a un familiar que esté descansando", "Prestar un útil escolar a alguien que lo necesite en clase con una sonrisa.", "Limpiar tu escritorio", "Compartir una fruta o parte de tu merienda con un amigo.", "Sostener las bolsas o abrir la puerta a un adulto cuando vuelva con las compras.", "Transformar un envase o caja en un lapicero o contenedor para el salón o casa.", "Buscá una forma de reutilizar un objeto", "Representar con gestos el estado de ánimo de un amigo y preguntar cómo se siente hoy.", "Contarle a alguien tres aspectos que te hacen feliz de compartir tiempo con él o ella.", "Usar la palabra \"por favor\" en el 100% de tus peticiones del día.", "Compartir en grupo una acción diaria con la que ayudas a cuidar tu entorno o a tu familia.", "Ayuda a un amigo", "Enseñar o explicar a mamá o papá un tema que te haya costado entender durante la clase.", "Mencionar hábitos de responsabilidad", "Realizar una rutina de 3 movimientos de relajación para soltar los hombros y la espalda.", "Inventar un paso de baile en pareja donde ambos deben coordinar los pies.", "Aprender a decir \"Hola\" y \"Gracias\" en lengua de señas o en un idioma distinto.", "Correr en el lugar durante 1 minuto.", "Hacer 5 respiraciones profundas contando hasta 4 al inhalar y 4 al exhalar.", "Caminá 10 minutos con un adulto.", "Hacé una plancha durante 20 segundos.", "Proponer un juego de \"Simón dice\" de 1 minuto.", "Estira brazos y piernas durante 2 minutos.", "Jugá al aire libre durante 30 minutos.", "Usar el teléfono solo para estudiar", "Dejar el teléfono guardado durante la comida para conversar con los demás.", "Organizar un juego colectivo e incluir a alguien que esté solo o sin grupo.", "Escuchar una anécdota completa de un adulto o compañero manteniendo contacto visual y sin interrumpir.", "Acompañar a un adulto al mercado y sugerirle elegir el producto que tenga empaque reciclable.", "Dibujar un proyecto o meta donde tu ahorro ayude o beneficie a toda tu familia.", "Proponerte una meta de convivencia para la semana (por ejemplo, incluir siempre a alguien nuevo en los juegos).", "Pensar en una situación del día donde pudiste actuar con más empatía y cómo hacerlo mañana.", "Contar cuántas cosas en la casa o escuela puedes reutilizar en lugar de tirar a la basura.", "Acomodar los cojines o sillas de una sala para que el espacio se vea acogedor para la familia.", "Ordenar los libros que tengas en casa.", "Guardar los zapatos en su lugar.", "Ayudar a lavar los platos.", "Limpiar una mesa.", "Ordenar los almohadones del sillón.", "Ayudar a tender la ropa.", "Ayudar a juntar la ropa seca.", "Dejar limpio y desocupado el espacio de estudio de la mesa para que otra persona lo pueda usar.", "Ordenar los útiles escolares.", "Verificar que el banco o espacio de estudio quede completamente limpio para el compañero que lo use después.", "Revisar que tu mochila tenga todo lo necesario.", "Sostener las herramientas o materiales mientras un adulto repara algo en casa o la escuela.", "Mantener limpio un espacio común para que el personal de aseo o tu familia tenga menos carga de trabajo.", "Hacerle un favor a un familiar antes de que lo solicite", "Ayudar a limpiar una parte de la casa.", "Recoger un objeto del piso que no sea tuyo y devolverlo a su dueño o ponerlo en su lugar.", "Ordenar tus libros por tamaño.", "Colocar los insumos de comida al alcance de todos de forma ordenada.", "Ayudar a organizar la despensa.", "Doblar cinco prendas de ropa.", "Ayudar a hacer la cama de otra persona.", "Acomodar los zapatos de la entrada para despejar el pasillo y prevenir tropiezos.", "Recoger del piso los colores o lápices caídos de otros compañeros al terminar la clase.", "Dejar una pequeña nota con una carita feliz o mensaje lindo debajo del plato de cada integrante de la mesa.", "Acomodar los útiles de un hermano o compañero de cuarto para facilitarle la mañana.", "Ayudar a doblar las prendas de otro familiar para colaborar en la rutina del hogar.", "Organizar la caja de materiales (tijeras, colores) para que estén listos para la siguiente usada.", "Ofrecerse a sostener la mochila de un amigo mientras él se ata los cordones de los zapatos.", "Acomodar un espacio común de trabajo para que todos encuentren fácil los materiales.", "Darle un abrazo a un familiar y decirle sinceramente \"gracias por cuidar de mí\".", "Darle un abrazo a alguien de tu familia.", "Decir algo lindo a un familiar.", "Observar tu entorno y ayudar a alguien de forma espontánea.", "Escribir una carta corta de agradecimiento a los maestros o cuidadores.", "Pedir una disculpa sincera y ofrecer una solución si cometiste una equivocación con alguien.", "Pedir perdón si hiciste algo que molestó a alguien.", "Decir una cosa que admires de otra persona.", "Ayudar a un hermano o hermana.", "Ceder tu lugar en la fila o el turno de un juego a un compañero con una actitud amable.", "Mirar a los ojos a la persona que te habla y hacerle una pregunta respetuosa sobre lo que contó.", "Escuchar a alguien sin interrumpir.", "Hacer un dibujo para regalar.", "Escribir una nota bonita para alguien.", "Felicitar a alguien por algo que hizo bien.", "Dedicar cinco minutos exclusivos de tu tiempo a ayudar en la tarea que tu familiar necesite en ese momento.", "Ayudar a un familiar durante cinco minutos.", "Hacer una buena acción sin decirle a nadie.", "Identificar a alguien que haya sido amable contigo hoy y agradecérmelo en persona.", "Decir \"gracias\" cada vez que alguien te ayude.", "Dar un cumplido sincero a un compañero.", "Leer cinco páginas de un libro.", "Resolver cinco cuentas de matemática.", "Practicar las tablas durante 10 minutos.", "Escribir cinco palabras nuevas.", "Buscar el significado de tres palabras.", "Escribir una oración con cinco palabras diferentes.", "Leer en voz alta durante cinco minutos.", "Practicar la escritura durante 10 minutos.", "Repasar una materia que te cueste.", "Hacer cinco ejercicios de matemática.", "Sacar de la mochila hojas o materiales que ya no uses y ponerlos en la caja de reciclaje.", "Dejar la mochila acomodada en su lugar sin invadir el espacio ni el paso de los demás.", "Preparar los útiles para mañana.", "Leer un cuento y contarle de qué se trataba a alguien.", "Escribir una historia corta.", "Inventar un final diferente para un cuento.", "Dibujar algo relacionado con lo que aprendiste.", "Escribir en una lista 5 cosas o momentos felices que hayas vivido durante la semana.", "Decir una frase de apoyo a un compañero usando solo palabras que comiencen con la vocal A o E.", "Apartar un objeto o juguete en buen estado para donarlo.", "Comprometerse a cuidar los materiales escolares durante un mes para no tener que hacer compras.", "Intercambiar una figurita, libro o útil con un amigo en lugar de comprar uno nuevo.", "Separar y clasificar el papel o cartón de la casa para llevarlo a un centro de reciclaje.", "Ordenar tus monedas por valor.", "Crear un letrero que diga 'Meta de Ahorro del Salón/Hogar' para pegar en un lugar visible.", "Evitar el uso de plásticos de un solo uso por un día completo.", "Guardar las tapitas de botellas plásticas para donarlas a una institución benéfica.", "Guardar el cambio que recibas.", "Dividir la merienda en dos partes iguales para compartirla con alguien.", "Decorar una hoja con tu meta de ahorro.", "Escribir cuánto dinero querés ahorrar.", "Preguntarle a un adulto sobre cómo ayudaban a los demás cuando eran niños.", "Preguntarle a un adulto cómo ahorrar dinero.", "Elegir productos sin envoltorio de plástico cuando visites el supermercado o almacén con un adulto.", "Separar dinero para ahorrar y dinero para gastar.", "Revisar cuánto dinero juntaste esta semana.", "Pensar en una forma creativa de reparar un juguete o libro roto en lugar de tirarlo.", "Guardar envases limpios para transformarlos en lapiceros para el salón de clases.", "Guardar una moneda extra durante tres días.", "Hacer 5 sentadillas suaves y dar un aplauso al subir.", "Hacer cinco sentadillas.", "Coordinar 5 saltos al mismo tiempo con un amigo mirándose a los ojos.", "Hacer equilibrio sobre una línea del suelo llevando un objeto pequeño en la mano para entregárselo a alguien.", "Caminar en parejas coordinando los pasos al mismo tiempo sin soltarse de la mano.", "Caminar en fila imitando los pasos del compañero que va al frente como en una caminata de exploración.", "Hacer 3 saltos de rana hacia adelante para juntar un papel del suelo y llevarlo al tacho.", "Bailar al ritmo de una música imaginaria y congelarse cuando la \"música\" se detenga.", "Bailar durante un minuto.", "Estirar los brazos durante 30 segundos.", "Guiar a tu grupo en una rutina de 30 segundos de saltos de alegría en equipo.", "Hacer 10 movimientos de brazos.", "Hacer cinco sentadillas y cinco saltos.", "Dar un paseo de 5 minutos con un adulto conversando sobre un tema que a él o ella le interese.", "Caminar por la casa durante cinco minutos con un adulto.", "Proponer un juego donde todos ganen trabajando en equipo.", "Dirigir a tus mamá o papá en una pausa activa de estiramientos al terminar una tarea difícil.", "Hacer una pequeña rutina de ejercicios.", "Guiar a un compañero con los ojos vendados durante 10 pasos dándole indicaciones claras de voz.", "Hacer 10 pasos caminando hacia atrás con cuidado.", "Hacer una coreografía de 30 segundos.", "Dibujar a tu mascota.", "Dibujar tu casa.", "Dibujar tu comida favorita.", "Diseñar una tarjeta de agradecimiento para regalarle a un trabajador de la escuela o a alguien del barrio.", "Colorear un dibujo con mensajes alegres y regalárselo a alguien que se note triste.", "Pintar un dibujo.", "Inventar un personaje e inventar una historia sobre él.", "Inventar una historia corta donde el personaje principal de una historia resuelva un problema ayudando a sus vecinos.", "Realizar una figura de origami para dársela a un amigo.", "Diseñar un marcapáginas decorado con una frase motivadora y regalárselo a alguien que le guste leer.", "Diseñar una hoja con mensajes de ánimo para colocarla en el cartelera o mural del aula.", "Decorar una hoja con dibujos.", "Hacer un collage con papeles que ya no uses.", "Crear un juego sencillo con papel.", "Inventar un nombre para un superhéroe.", "Dibujar cómo sería tu casa ideal.", "Crear un dibujo sobre el ahorro.", "Hacer una historieta de cuatro cuadros.", "Inventar una mascota imaginaria.", "Dibujar un animal mezclando dos animales diferentes.", "Imitar a un perro.", "Imitar a un gato.", "Imitar a un mono.", "Imitar a un elefante.", "Imitar a una vaca.", "Imitar a un caballo.", "Imitar a un pato.", "Imitar a una gallina.", "Imitar a un pingüino.", "Imitar a un león.", "Hacer el sonido de una rana.", "Hacer el sonido de un pájaro.", "Hacer el sonido de un tren.", "Hacer el sonido de una ambulancia.", "Hacer el sonido de un auto.", "Caminar como un robot.", "Caminar como un dinosaurio.", "Caminar como un cangrejo.", "Hacer una cara graciosa durante 10 segundos.", "Contar hasta 20 mientras ayudas a juntar los útiles que quedaron desordenados.", "Contar de 2 en 2 hasta 20 felicitando a tus padres en cada número par.", "Hacer una cuenta regresiva desde 10 antes de empezar una tarea para concentrarse en equipo.", "Decir cinco cualidades positivas sobre las personas que te rodean que empiecen con la letra \"A\" o \"C\".", "Decir cinco palabras que empiecen con la misma letra.", "Decir cinco animales.", "Decir cinco frutas.", "Decir cinco colores.", "Decir cinco países.", "Decir cinco objetos de la casa.", "Decir cinco cosas que puedas encontrar en una escuela.", "Decir el abecedario sin equivocarte.", "Mencionar un compromiso o buena acción que te comprometas a realizar cada día de la semana.", "Inventar una adivinanza sencilla sobre la amistad y hacérsela a un grupo.", "Repetir una frase positiva 3 veces rápido sin equivocarse (ejemplo: \"Hoy comparto y ayudo con alegría\").", "Hacer una imitación graciosa y respetuosa de un personaje de dibujos animados.", "Recitar un verso divertido usando diferentes tonos de voz (robot, gigante, susurro) para hacer reír a los demás.", "Preguntarle a un abuelo o adulto qué canción le cantaban de niño.", "Crear un ritmo golpeando suavemente la mesa o aplaudiendo y lograr que otro lo siga.", "Decir un trabalenguas tres veces rápido.", "Cambiar y servir agua limpia a un animal doméstico o colocar un recipiente limpio con agua fresca para pájaros.", "Ayudar a poner agua a una mascota.", "Ayudar a limpiar el lugar donde come una mascota.", "Cepillar a tu mascota si un adulto lo permite.", "Ayudar a un hermano o amigo a recoger los juguetes o accesorios de su mascota.", "Verificar que los animales del hogar o del entorno tengan sombras y agua suficiente en días calurosos.", "Aprender con ayuda de un adulto la porción correcta de alimento que necesita una mascota para no desperdiciar.", "Ayudar a preparar su comida con un adulto.", "Hacer una foto o dibujo de la mascota mientras duerme o juega", "Decir tres cosas que te gustan de tu mascota.", "Colocar una pequeña etiqueta recordatoria cerca del interruptor de luz que diga: \"Apágame al salir\".", "Explicarle amablemente a un niño más pequeño por qué es importante no dejar correr el agua mientras se lava las manos.", "Cerrar una canilla que haya quedado abierta.", "Separar papel para reciclar.", "Usar el reverso de una hoja impresa o usada para hacer dibujos, notas o borradores de tareas.", "Asegurarse de que todos tus cuadernos tengan ambas caras de la hoja escritas antes de pasar a una nueva.", "Juntar cinco desperdicios del suelo usando guantes o protección y colocarlos en el tacho correspondiente.", "Recoger cinco papeles del suelo.", "Ser el encargado del día de revisar que los aparatos eléctricos no queden encendidos sin uso.", "Recordarle a un familiar apagar una luz.", "Ayudar a cuidar una planta.", "Cuidar el jardín o plantas de la casa quitando con delicadeza las partes secas.", "Plantar una semilla con un adulto.", "Construir una caja o bote usando cartón usado para recolectar papel reciclable en el hogar o salón.", "Hacer un recipiente reciclado.", "Buscar un objeto que pueda reutilizarse.", "Usar un vaso con agua para lavarte los dientes en lugar de dejar la canilla abierta.", "Aprovechar la luz natural del sol durante el día abriendo cortinas en lugar de encender luces.", "No dejar luces encendidas innecesariamente.", "Recoger basura de un lugar seguro.", "Hacer un dibujo sobre cómo cuidar el planeta.", "Jugar un juego de mesa con la familia.", "Jugar a las cartas con un familiar.", "Armar un rompecabezas.", "Crear un juego con reglas inclusivas donde todas las personas del grupo puedan participar por igual.", "Explicar con paciencia las instrucciones de un juego a alguien que no sepa cómo participar.", "Permitir con una sonrisa que tu compañero o familiar elija la actividad o juego de la jornada.", "Proponer jugar promoviendo el juego limpio y el respeto hacia todos los participantes.", "Darle la mano o un aplauso sincero al equipo o persona que ganó el juego.", "Agradecer la partida a tus compañeros al finalizar un juego sin importar el resultado.", "Aceptar perder sin enojarte.", "Ofrecerte a guardar las fichas y tableros de un juego de mesa.", "Organizar una dinámica de integración o conversación grupal cara a cara en casa sin usar dispositivos.", "Crear cinco preguntas curiosas o amables sobre los gustos de tus compañeros para conocerlos mejor.", "Organizar un concurso de dibujos donde se premie el esfuerzo y la creatividad de cada participante.", "Hacer un concurso de dibujos.", "Crear tres adivinanzas divertidas sobre valores o buenas acciones para el grupo.", "Inventar tres adivinanzas.", "Hacer una sopa de letras.", "Hacer una sopa de letras.", "Resolver un crucigrama sencillo.", "Estar 20 minutos sin celular.", "Estar 30 minutos sin televisión.", "Dejar la tablet guardada durante una hora.", "Usar el celular solamente para estudiar.", "Dejar todas tus obligaciones y espacio ordenado antes de tomar tiempo libre.", "Cumplir responsablemente los tiempos de uso de pantallas sin que tengan que recordártelo.", "Escribir en una tarjeta 3 cosas que admiras de la persona que tienes al lado.", "Dejar el celular fuera de la mesa durante la comida.", "Pasar una tarde haciendo actividades sin pantalla.", "Leer en lugar de mirar televisión durante 20 minutos.", "Dar cinco gracias durante el día.", "Decir tres cosas buenas que te hayan pasado.", "Escribir tres cosas por las que estás agradecido.", "Decir algo bueno de un compañero.", "Decir algo bueno de un compañero.", "Escribir una meta para mañana.", "Dar 5 agradecimientos por cosas no materiales (como el sol, la amistad, la música).", "Pedir perdón a alguien si corresponde.", "Realizar un favor en secreto a alguien para facilitarle el día.", "Limpiar las migas y organizar las sillas al terminar de comer para ayudar a quien cocinó.", "Juntar la ropa sucia del cuarto de un hermano menor o familiar y llevarla al cesto.", "Recoger y organizar los lápices o colores compartidos en el escritorio de estudio.", "Guardar tus útiles después de estudiar.", "Ayudar a preparar el desayuno.", "Colocar los sobrantes de comida en recipientes para conservarlos correctamente sin desperdiciar nada.", "Guardar los restos de comida adecuados en un recipiente para dárselos a las mascotas. (Con la supervisión de mamá y papá).", "Ofrecerse a limpiar la mesa y las sillas del comedor sin que nadie lo pida.", "Pasar una rejilla limpia por la mesa en el lugar donde comiste para dejarlo impecable.", "Limpiar tu espacio de juego al terminar.", "Averiguar cuál fue el primer trabajo que tuvo papá o mamá y qué hacía exactamente en él.", "Encontrar una foto de sus padres cuando eran niños o adolescentes y descubrir qué edad tenían exactamente en la imagen.", "Preparar una nota con un dibujo o mensaje secreto y esconderla en el bolsillo del saco, cartera o mochila de un padre para que la encuentre solo.", "Practicar en un papel la firma o letra de papá o mamá hasta lograr la copia más parecida posible.", "Mirar cómo viste papá o mamá por la mañana y dibujar de memoria su vestimenta completa por la tarde sin volver a mirarlos.", "Hacerle una mini entrevista a tu mamá o papá sobre su infancia.", "Dar las buenas noches a tu familia.", "Inventar un saludo secreto de manos (con 3 movimientos) con un compañero o familiar.", "Decir \"te quiero\" a alguien de tu familia.", "Agradecerle a alguien por algo que hizo por vos.", "Decir una adivinanza sobre un objeto del salón para que un compañero intente adivinarlo en 3 intentos.", "Hacer una buena acción elegida por un adulto.", "Encontrar y traer 3 objetos pequeños del mismo color en menos de 30 segundos.", "Imitar una frase o gesto típico de tu papá o mamá, y ellos imitan un berrinche o frase típica de vos durante 20 segundos.", "Elegir una tarea de la casa y hacerla sin que nadie te la pida."], "parejas": ["Darse un beso.", "Abrazar al otro.", "Hallar 5 minutos seguidos.", "Tomarse de la mano.", "Que uno lave la loza.", "Vestirse como el otro.", "Que uno cocine.", "Estar todo el dia separados.", "Llamar a su suegro.", "Colgar la ropa limpia.", "Regalarle un dulce al otro.", "Regalar algo salado al otro.", "Mirarse a los ojos sin decirse nada.", "Ponerse de pie, tomados de las manos, y cantarse 5 cosas que le gusten del otro.", "Cocinar juntos una receta juntos sin mirar un tutorial.", "Dar un masaje de 10 minutos.", "Enviarse un mensaje romántico.", "Jugar al teléfono descompuesto dibujado en la espalda de otro.", "Mirarse a los ojos durante 1 minuto sin reírse.", "Susurrarse al oído, muy despacito, 5 cosas que aman del otro.", "Recrear su primera foto juntos.", "Dejar que la otra persona elija tu ropa por un día.", "Bailar una canción sin música.", "Intentar dibujarse mutuamente en 5 minutos.", "Ponerse de pie y cantarle a tu pareja preguntas incómodas con total honestidad.", "Hacer un picnic improvisado.", "Cocinar una comida juntos sin usar el celular.", "Ver quién conoce mejor al otro con un juego de preguntas.", "Enviarse un mensaje romántico sin decir \"te amo\".", "Hacer una sesión de fotos divertida.", "Contar su recuerdo favorito juntos.", "Imitar al otro durante 5 minutos.", "Hacer un TikTok o reel juntos.", "Besarse durante 30 segundos sin separarse.", "Elegir una cita sorpresa para la próxima salida.", "Escribir una carta para abrir dentro de un año.", "Susurrarle al oído a tu pareja un sueño que quieren cumplir juntos.", "Hacer una guerra de almohadas.", "Comer del mismo plato.", "Escribir una lista de 10 cosas que agradecen del otro.", "Hacer un dibujo juntos.", "Contar su mayor miedo.", "Ver el atardecer juntos.", "Intercambiar sus canciones favoritas.", "Bailar bajo la lluvia (si se puede).", "Preparar el desayuno juntos.", "Mirar un álbum de fotos.", "Hacer una caminata de 30 minutos.", "Dar un abrazo de un minuto.", "Hacer una lista de lugares que quieren visitar.", "Aprender una palabra en otro idioma.", "Ver una película elegida por el otro.", "Jugar piedra, papel o tijera; el perdedor invita un dulce.", "Hacer un reto de karaoke.", "Escribirse en una notita y entregársela: un cumplido inesperado.", "Hacer un picnic en el piso de la casa.", "Compartir un helado.", "Cocinar un postre.", "Ver fotos viejas de la infancia.", "Elegir una canción que los represente.", "Caminar tomados del meñique.", "Dar un beso en la frente.", "Ver las estrellas.", "Hacer una lista de sueños.", "Escribirse una nota y esconderla.", "Jugar un juego de mesa.", "Armar un rompecabezas juntos.", "Contar un chiste hasta hacer reír al otro.", "Hacer una videollamada divertida si están lejos.", "Recrear una foto famosa.", "Dibujar un corazón en la mano del otro.", "Hacer un baile improvisado.", "Escribirlo en un papel y mostrárselo sin hablar: cuál fue el momento más feliz juntos.", "Compartir una bebida con dos pajitas.", "Intercambiar una prenda por una hora.", "Hacer una competencia de adivinanzas.", "Escribir tres metas para este mes.", "Ver quién pestañea primero.", "Aprender un paso de baile nuevo.", "Hacer una lista de películas pendientes.", "Inventar una historia entre los dos.", "Sacarse una foto espontánea.", "Dar un abrazo por la espalda.", "Hacer un brindis por su relación.", "Preparar una merienda juntos.", "Elegir un apodo nuevo.", "Hacer una carrera tomados de la mano.", "Mirar videos graciosos juntos.", "Probar una comida nueva.", "Hacer una lista de canciones románticas.", "Contar cómo imaginan su futuro.", "Dormir una siesta abrazados.", "Escribir una carta de agradecimiento.", "Hacer una búsqueda del tesoro en casa.", "Intercambiar un accesorio.", "Elegir una foto para imprimir.", "Hacer una manualidad juntos.", "Aprender un truco de magia sencillo.", "Hacer un reto de equilibrio en un pie.", "Terminar el día con un abrazo de 2.", "Hacer una videollamada de 10 minutos sin usar palabras.", "Intentar adivinar el color favorito del otro.", "Preparar pochoclos y ver una película.", "Hacerse una pregunta profunda cada uno.", "Elegir una canción y dedicársela al otro.", "Contar cómo sería la cita perfecta.", "Mirar el amanecer juntos.", "Tomarse una foto con la misma pose de una pareja famosa.", "Intercambiar fondos de pantalla por un día.", "Caminar abrazados durante 5 minutos.", "Prepararle una bebida al otro.", "Hacer un avión de papel y lanzarlo juntos.", "Escribir una lista de 10 recuerdos felices.", "Elegir una canción y bailarla con los ojos cerrados.", "Ver quién hace el mejor dibujo del otro.", "Comer una fruta nueva.", "Elegir una palabra que represente la relación.", "Contar cuál fue el mejor regalo recibido.", "Armar una playlist juntos.", "Mirarse fijamente durante 2 minutos.", "Hacer una guerra de cosquillas.", "Dar un beso en la mejilla cada vez que el otro sonría durante 10 minutos.", "Hacer un desafío de origami.", "Jugar a las adivinanzas.", "Elegir una receta para cocinar el fin de semana.", "Compartir una golosina favorita.", "Escribir 5 deseos para el próximo año.", "Hacer un selfie con una cara exagerada.", "Inventar un saludo exclusivo de pareja.", "Ver un video de viajes y elegir un destino soñado.", "Contar el sueño más raro que hayan tenido.", "Hacer una caminata sin usar el celular.", "Cambiarse el nombre en el celular por un apodo divertido durante un día.", "Buscar una nube con forma curiosa.", "Escribir una nota de buenos días.", "Contar tres cosas que admiran del otro.", "Jugar \"Verdad o Reto\".", "Hacer un reto de mímica.", "Elegir un emoji que represente su relación.", "Hacer un dibujo entre los dos, turnándose cada 30 segundos.", "Aprender una palabra en lenguaje de señas.", "Elegir una serie para empezar juntos.", "Contar una historia inventada por turnos.", "Ver quién recuerda más fechas importantes.", "Hacer una carrera caminando hacia atrás.", "Escribir una lista de canciones que les den nostalgia.", "Elegir un color y vestir una prenda de ese color.", "Hacer una cápsula del tiempo con recuerdos.", "Dar un abrazo antes de despedirse.", "Gritarlo con toda la emoción: \\\"gracias\\\" por algo que hizo el otro recientemente.", "Intercambiar un accesorio por el resto del día.", "Hacer una carrera de saltos.", "Escribir tres cosas que admiran del otro.", "Sacarse una foto haciendo la misma pose.", "Preparar una bebida para el otro.", "Elegir una canción y dedicarla.", "Jugar a las escondidas.", "Mirar un álbum de fotos juntos.", "Intentar hablar con acento durante 10 minutos.", "Hacer una torre con vasos.", "Dar un abrazo por la espalda.", "Contar un secreto divertido de la infancia.", "Elegir una película al azar y verla.", "Comer una golosina favorita juntos.", "Hacer una carrera caminando hacia atrás.", "Inventar una palabra que solo ustedes entiendan.", "Escribir una meta que quieran cumplir este año.", "Hacer una caminata de 30 minutos.", "Ver quién hace reír primero al otro.", "Cambiarse el fondo de pantalla por una foto juntos.", "Dibujar con la mano no dominante.", "Hacer una competencia de trabalenguas.", "Buscar una canción que nunca hayan escuchado.", "Compartir un postre.", "Inventar un baile de pareja.", "Armar un rompecabezas pequeño.", "Ver un capítulo de una serie juntos.", "Escribirse una carta corta.", "Hacer un reto de mímica.", "Aprender una palabra en otro idioma.", "Dar un masaje de manos.", "Compartir una anécdota graciosa.", "Hacer una lista de 10 cosas que quieren hacer juntos.", "Jugar al \"¿Qué prefieres?\".", "Mirarse a los ojos durante 2 minutos.", "Preparar una merienda juntos.", "Sacarse una selfie espontánea.", "Contar cuál fue el mejor día que pasaron juntos.", "Elegir un emoji que represente su relación.", "Hacer un dibujo entre los dos.", "Darse un beso en la frente.", "Escribir una nota de agradecimiento.", "Elegir un lugar para una futura cita.", "Hacer una competencia de equilibrio.", "Jugar al veo-veo.", "Buscar una nube con una forma curiosa.", "Hacer una lista de canciones para un viaje.", "Ver el atardecer juntos.", "Elegir un recuerdo favorito y contarlo.", "Hacer una promesa divertida y cumplirla.", "Ver una película de terror juntos.", "Elegir una receta y guardarla para hacerla otro día.", "Hacer un reto de karaoke.", "Escribir 5 cualidades del otro.", "Jugar una partida de cartas.", "Intentar resolver un cubo Rubik juntos.", "Comer una fruta que nunca hayan probado.", "Crear una lista de deseos para una cita.", "Hacer una caminata en silencio durante 5 minutos.", "Sacarse una foto saltando al mismo tiempo.", "Inventar un hashtag para la pareja.", "Elegir una canción y traducir su letra.", "Hacer una competencia de chistes.", "Escribirse una carta de 5 líneas.", "Ver fotos de cuando eran niños.", "Elegir un animal que represente a cada uno.", "Armar una cabaña con sábanas.", "Comer un snack favorito del otro.", "Crear una lista de reproducción para un viaje.", "Jugar al ahorcado.", "Hacer una competencia de piedra, papel o tijera al mejor de 5.", "Mirar un video de recetas y elegir una.", "Escribir una meta para el próximo mes.", "Hacer una caminata por un lugar nuevo.", "Contar cuál fue su mejor cumpleaños.", "Dibujar un paisaje juntos.", "Intercambiar un accesorio por una hora.", "Aprender un dato curioso y contárselo al otro.", "Hacer una lista de 10 canciones que les gusten a ambos.", "Inventar un juego nuevo.", "Buscar un lugar bonito para sacarse una foto.", "Compartir una pizza.", "Escribir una frase que describa su relación.", "Elegir un recuerdo y recrearlo.", "Hacer una competencia de mímica.", "Buscar una palabra difícil y aprender su significado.", "Mirar un documental corto juntos.", "Hacer una carrera de avioncitos de papel.", "Contar cuál fue el mejor viaje que hicieron.", "Crear una lista de planes para las vacaciones.", "Elegir una canción para bailar.", "Preparar un sándwich juntos.", "Hacer un reto de memoria.", "Elegir una foto favorita del otro.", "Buscar una frase inspiradora y compartirla.", "Inventar un brindis especial.", "Dar un abrazo de 30 segundos.", "Escribir 5 sueños que quieran cumplir.", "Contar qué superpoder les gustaría tener.", "Hacer un selfie para recordar el día.", "Elegir un lugar nuevo para visitar.", "Hacer una guerra de pulgares.", "Caminar descalzos sobre el pasto.", "Intentar resolver un acertijo juntos.", "Gritarse, con mucho cariño, un cumplido usando solo tres palabras.", "Sacarse una foto haciendo un corazón con las manos.", "Comer una golosina de la infancia.", "Hacer un reto de equilibrio tomados de la mano.", "Elegir una canción y adivinar quién la canta.", "Dibujar al otro con los ojos cerrados.", "Hacer una lista de películas pendientes.", "Elegir una ciudad que quieran conocer.", "Contar una anécdota graciosa del colegio.", "Ver un capítulo de una serie elegida al azar.", "Inventar una contraseña secreta de pareja.", "Hacer una carrera hasta un árbol o poste.", "Probar una bebida nueva.", "Deletrearse, letra por letra y muertos de risa, el mejor consejo que recibieron.", "Compartir un paquete de papas fritas.", "Hacer una competencia de caras graciosas.", "Buscar una canción de su año de nacimiento.", "Escribir una lista de cosas que los hacen felices.", "Jugar al \"Simón dice\".", "Elegir una foto vieja y recrearla.", "Aprender un dato curioso sobre animales.", "Hacer una mini sesión de fotos en blanco y negro.", "Escribir una meta para la próxima semana.", "Mirar el cielo durante 5 minutos.", "Buscar una palabra nueva en el diccionario.", "Inventar un nombre para una mascota imaginaria.", "Compartir un chocolate.", "Hacer una competencia de aplausos sincronizados.", "Elegir un emoji que describa el día de hoy.", "Contar cuál fue su dibujo animado favorito.", "Hacer una carrera caminando como pingüinos.", "Elegir una canción para despertarse cada mañana.", "Ver quién arma más rápido un avión de papel.", "Escribir una lista de 10 cosas para hacer antes de fin de año.", "Buscar un lugar tranquilo para conversar.", "Inventar una historia usando cinco palabras elegidas al azar.", "Hacer una torre con cartas o vasos.", "Contar el momento más divertido que recuerden.", "Elegir una comida para cocinar juntos otro día.", "Hacer una competencia de adivinar canciones tarareándolas.", "Buscar una frase romántica y leerla.", "Dar un abrazo sin soltarse durante un minuto.", "Escribir una promesa divertida.", "Hacer una foto sosteniendo el mismo objeto.", "Deletrearlo bailando: cinco cosas que les hacen sonreír.", "Hacer un brindis por todos los momentos vividos juntos.", "Ir a una librería y elegir un libro para el otro.", "Visitar una plaza nueva.", "Hacer una carrera en los carritos del supermercado (si está permitido).", "Elegir un sabor de helado nuevo para probar.", "Hacer una sesión de fotos en un parque.", "Alimentar a unas palomas o patos (donde esté permitido).", "Entrar a una tienda y elegir un regalo imaginario para el otro.", "Buscar un mural bonito y sacarse una foto.", "Contar lo que sintieron cuando se conocieron por primera vez.", "Escribir una carta de amor de 10 líneas.", "Contar el mejor consejo que les dieron.", "Buscar una canción al azar y bailarla.", "Hacer una caminata al atardecer.", "Dibujar un paisaje juntos.", "Hacer un desafío de adivinar objetos con los ojos cerrados.", "Inventar una receta loca.", "Buscar una frase bonita y dedicársela al otro.", "Hacer una lista de 20 sueños por cumplir.", "Aprender una palabra en un idioma nuevo.", "Elegir una tradición que quieran empezar como pareja.", "Contar qué harían si ganaran la lotería.", "Comprar un llavero igual para ambos.", "Escribir una lista de canciones para un viaje en auto.", "Buscar la foto más antigua que tengan juntos.", "Ver un amanecer juntos.", "Mirar un capítulo de una serie sin usar el celular.", "Hacer una guerra de globos de agua (si el clima lo permite).", "Crear un collage con fotos juntos.", "Elegir un restaurante para visitar más adelante.", "Preparar una pizza casera.", "Contar una historia inventada usando cinco palabras al azar.", "Hacer una competencia de memoria.", "Elegir una canción para dedicar todos los aniversarios.", "Hacer un picnic en una plaza.", "Escribirse una carta que no podrán leer hasta el próximo año.", "Hacer una cápsula del tiempo.", "Sacarse una selfie en cada estación del año.", "Elegir una palabra que describa el día.", "Hacer una lista de cosas por las que se sienten agradecidos.", "Ver quién encuentra primero un trébol de cuatro hojas (o intentarlo).", "Armar un Lego o rompecabezas juntos.", "Ir a una cafetería y probar una bebida nueva.", "Hacer una caminata nocturna por un lugar seguro.", "Escribir un poema entre los dos.", "Elegir una canción y cantarla completa.", "Hacer una lista de metas para los próximos cinco años.", "Elegir una foto para enmarcar.", "Hacer una competencia de lanzamiento de papel al basurero.", "Contar cuál fue el mejor regalo que recibieron en la vida.", "Escribir tres cosas que quieren aprender juntos.", "Hacer un reto de preguntas rápidas.", "Mirar un documental sobre un tema que les interese.", "Ir a una feria o mercado local.", "Sacarse una foto con un paisaje bonito.", "Elegir un postre para compartir.", "Hacer una lista de 10 planes para el próximo verano.", "Ver una película animada.", "Inventar un juego de mesa sencillo.", "Hacer un reto de dibujo en un minuto.", "Contar qué fue lo que más les hizo reír esta semana.", "Elegir una canción que les recuerde su primer encuentro.", "Escribir un mensaje para leer cuando estén tristes.", "Dar un abrazo de un minuto antes de despedirse.", "Sacarse una foto sonriendo juntos.", "Planear su próxima aventura juntos."], "liceo": ["Contar un chiste.", "Pasar al pizarrón y dibujar un retrato rápido del profesor en 15 segundos.", "Inventar una historia de 5 oraciones.", "Ponerte de pie y recitar de memoria el estribillo de tu canción favorita.", "Dibujar con la mano no dominante.", "Pasar al pizarrón y escribir una frase motivadora para todo el grupo.", "Ponerte de pie y cantar el abecedario al revés (hasta donde puedas).", "Hacer la imitación del sonido de una sirena de ambulancia al frente de la clase.", "Pasar al frente del salón y gritar, con mucha emoción, un trabalenguas.", "Ponerte de pie e inventar un grito de guerra o lema gracioso para tu clase.", "Ayudar a tres compañeros.", "Pasar al pizarrón y dibujar la caricatura de un animal en 10 segundos.", "Ordenar un rincón del salón.", "Ponerte de pie y cantar cuál es tu pasatiempo favorito y por qué (con toda la actitud de artista).", "Pasar al frente y contar 10 animales sin repetir.", "Pedirle a tres compañeros que te digan una palabra al azar y formar una frase con ellas.", "Pasar al pizarrón y escribir 10 frutas.", "Caminar de un extremo al otro del salón con un cuaderno en la cabeza.", "Encontrar cinco objetos azules.", "Recitar un trabalenguas rápido tres veces seguidas sin equivocarte.", "Ser el ayudante de la maestra por 10 minutos.", "Pasar al pizarrón y escribir el título de tu película o serie favorita.", "Escribir una palabra por cada vocal.", "Actuar como un locutor de radio presentando la hora al frente del salón.", "Hacer una carrera de equilibrio con un libro en la cabeza.", "Pararte al frente y dar un discurso de agradecimiento ficticio como si ganaras un premio.", "Resolver una cuenta mental.", "Elegir a un compañero y cantarle un cumplido.", "Cantar un pedacito de una canción.", "Actuar como un vendedor de infomerciales vendiendo un borrador al frente del grupo.", "Bailar 30 segundos.", "Pararte frente a la clase y deletrear bailando una virtud que consideres que define a todo el grupo de clase.", "Hacer la imitación de un animal.", "Actuar como si fueras un guía turístico mostrando el salón de clases.", "Hablar con voz de bebé durante 3 minutos.", "Pasar al pizarrón y escribir con la mano no dominante.", "Hacer 10 saltos de tijera.", "Pasar al pizarrón y escribir una palabra en efecto espejo.", "Hacer como si fueras locutor de radio y anunciar un trabalenguas sin equivocarse.", "Hacer la caminata de un zombie clásico de película por el pasillo central.", "Dibujar algo en el pizarrón con los ojos cerrados.", "Pasar al pizarrón y escribir tres objetivos personales para este año.", "Hacer una mímica para que la clase adivine.", "Ponerte de pie y responder: \"¿Qué es lo que más te gusta del grupo?\".", "Hacer una reverencia y cantar el abecedario lo más rápido posible.", "Pasar al pizarrón y escribir el año de tu nacimiento en números romanos.", "Caminar de un lado a otro del salón mientras gritás 10 países en menos de 30 segundos.", "Pasar al pizarrón y dibujar un meme clásico para que el grupo adivine cuál es.", "Ponerte de pie y cantar 5 cualidades de un compañero.", "Pararte al frente del salón y recitar un poema corto con voz dramática.", "Hacer una pose graciosa durante 20 segundos.", "Pararte al frente y actuar como un meteorólogo dando el pronóstico del tiempo.", "Caminar como un pingüino hasta la puerta y volver.", "Actuar como si entregaras un premio de honor al grupo al frente del salón.", "Inventar un minicuento de un minuto.", "Pararte al frente y actuar como un locutor presentando a tu grupo de clase.", "Pasar al frente del salón y gritar, con mucha emoción, 10 palabras que empiecen con la misma letra.", "Pararte al frente y simular que diriges una orquesta con intensidad.", "Hacer una reverencia cada vez que alguien diga su nombre durante 5 minutos.", "Ponerte de pie y contar qué fue lo más gracioso que te pasó esta semana.", "Imitar a un profesor (con respeto).", "Pasar al frente y contar tres cualidades positivas del compañero que tienes a la izquierda.", "Resolver una adivinanza que le haga la clase.", "Sostener una goma de borrar sobre tu cabeza sin que se caiga mientras das una vuelta a tu banco.", "Hacer equilibrio en un pie durante 20 segundos.", "Pararte al frente del salón y hacer una pose de estatua durante 15 segundos.", "Hablar como si fuera un presentador de televisión por un minuto.", "Pasar al pizarrón y escribir qué tres cosas te llevarías a una isla desierta.", "Pararte frente a la clase y deletrear bailando un agradecimiento al grupo.", "Imitar el mugido de una vaca.", "Hacer una estatua durante 30 segundos sin moverse.", "Hacer como si fueras locutor de radio y anunciar en voz alta cuál es tu género musical preferido.", "Elegir a otro compañero para hacer una prenda divertida junto con él (como bailar o hacer una mímica).", "Imitar el sonido de una moto acelerando a toda velocidad.", "Adivina el animal que un compañero imita.", "Hacer una reverencia y cantar cuál es el animal que más te da miedo y porque.", "inventar un saludo.", "Pararte frente a la clase y contar qué talento te gustaría aprender este año.", "contar un dato curioso.", "Imitar la caminata de un pingüino dando tres pasos hacia adelante.", "inventar una palabra.", "Pararte arriba de tu banco y hacer una pose de modelo durante 10 segundos.", "inventa una comida que no exista.", "Cantar el estribillo de una canción que elija el grupo.", "habla muy lento por un minuto.", "Bailar durante 20 segundos sin poner música.", "responde todo cantando durante 30 segundos.", "Hacer una imitación de un compañero hasta que adivinen quién es.", "comunícate solo con gestos por 10 minutos.", "Hablar con voz de bebé durante 2 minutos.", "haz una adivinanza para el grupo.", "Caminar por el salón como un modelo de pasarela.", "Caminar de un lado a otro del salón mientras gritás 10 objetos que hayan en un salón.", "Hacer 10 sentadillas mientras el grupo cuenta.", "inventa un lugar al que te gustaría viajar y explica por qué.", "Cantar \"Feliz cumpleaños\" como si estuvieras en una ópera.", "Ponerte de pie y cantar una ciudad o un país por cada letra de tu nombre (las que puedas).", "Hacer una declaración de amor falsa a una silla.", "imitar al primer animal que te imagines.", "Hablar durante un minuto con acento español.", "camina como el piso fuera de lava durante 20 segundos.", "Hacer la imitación de un profesor durante 30 segundos.", "imita a un cantante famoso.", "Bailar una canción imaginaria elegida por el grupo.", "mantén una sonrisa durante un minuto.", "Hacer 15 saltitos en el lugar.", "Pasar al frente del salón y gritar, con mucha emoción, tres cosas que te gusten de la escuela.", "Recitar el abecedario mientras hacés una pose diferente con cada letra.", "haz una pregunta graciosa a un compañero.", "Hacer una escena dramática porque se te rompió el lápiz.", "haz un baile de celebración por haber ahorrado.", "Cantar una canción usando solamente \"la la la\".", "saluda en un idioma inventado.", "Hacer una imitación de un animal elegido por el grupo.", "inventa una mascota para la escuela.", "Caminar en cuatro patas durante 10 segundos.", "Pasar al frente y contar cuál es tu comida favorita y porque.", "Hacer una presentación de vos mismo como si fueras una celebridad.", "haz una cadena de 5 palabras que estén relacionadas.", "Inventar una canción sobre el profesor y cantarla durante 20 segundos.", "10 minutos menos de recreo.", "Bailar como robot durante 20 segundos.", "Hacer dos ejercicios extra de deberes.", "Hacer 10 abdominales.", "Barrer el salón al terminar la clase.", "Pedirle matrimonio de mentira a un compañero elegido por el grupo.", "Ordenar el aula.", "Hablar como robot durante 2 minutos.", "Borrar el pizarrón toda la semana.", "Hacer una imitación exagerada de alguien de la clase.", "Juntar los papeles del piso al final del día.", "Cantar una canción triste con una sonrisa.", "Acomodar las sillas antes de irse.", "Hacer una coreografía improvisada de 20 segundos.", "Ser el encargado de repartir los cuadernos.", "Hacer 10 flexiones contra la pared.", "Escribir 20 veces: \"Hoy tendré más suerte\".", "Actuar como si acabaras de ganar la lotería.", "Hacer una vuelta al patio caminando como pingüino.", "Caminar como un pingüino durante 20 segundos.", "Llevar una corona de \"Rey/Reina de la mala suerte\" durante una clase.", "Hacer una escena de película de terror con un compañero.", "Usar una nariz de payaso por 10 minutos (si el colegio lo permite).", "Cantar una canción que el grupo elija.", "Cantar una canción antes de empezar la siguiente ronda del juego.", "Hablar durante un minuto sin usar la letra \"A\".", "Hacer 15 sentadillas.", "Pasar al pizarrón y escribir un cumplido a cinco compañeros diferentes.", "Imitar a un bebé que quiere su mamadera.", "Dibujar una caricatura de sí mismo.", "Hacer una publicidad de 30 segundos para tu mochila.", "Escribir una mini historia de 5 renglones con tres palabras elegidas por el grupo.", "Bailar como si estuvieras en una fiesta durante 20 segundos.", "Permanecer un turno sin participar en el siguiente juego.", "Hacer una escena de pelea imaginaria con una silla.", "Hacer una mini exposición de un minuto sobre un tema absurdo (por ejemplo: \"¿Por qué las medias desaparecen?\").", "Pararte frente a la clase y deletrear bailando un trabalenguas cinco veces rápido.", "Ayudar al docente a repartir materiales durante la clase.", "Hablar como un presentador de televisión durante un minuto.", "Hacer un cartel divertido que diga \"Hoy no tuve suerte\" y llevarlo 5 minutos.", "Hacer 20 saltos en el lugar.", "Limpiar su banco y el de un compañero.", "Cantar una canción con voz de anciano.", "Hacer 20 saltos de tijera.", "Hacer una declaración de amor a un objeto del salón.", "Hablar con voz de robot durante 5 minutos.", "Imitar a un gato durante 20 segundos.", "Cantar el estribillo de una canción elegida por el grupo.", "Hacer una entrada triunfal al salón y saludar como una estrella.", "Hacer una mímica para que dos compañeros adivinen.", "Bailar sin mover los pies durante 20 segundos.", "Ordenar los útiles de tres compañeros.", "Escribir 10 veces: \"La próxima tendré más suerte\".", "Actuar como si estuvieras dando una clase a niños de jardín.", "Hacer una pose graciosa cada vez que alguien diga tu nombre durante 5 minutos.", "Cantar una canción como si estuvieras llorando.", "Caminar como un robot durante 1 minuto.", "Hacer una imitación de un famoso elegido por el grupo.", "Hacer como si fueras locutor de radio y anunciar 15 animales sin repetir.", "Caminar como un zombie durante 20 segundos.", "Hacer una reverencia y cantar 15 frutas sin repetir.", "Hacer 15 sentadillas mientras cantás.", "Dibujar un animal con los ojos cerrados.", "Inventar un rap de 30 segundos sobre la clase.", "Hacer 20 sentadillas.", "Hablar como un villano durante 2 minutos.", "Hablar como un presentador de radio durante 2 minutos.", "Hacer una escena dramática porque perdiste una goma.", "Inventar una canción sobre la escuela y cantarla.", "Bailar una canción imaginaria elegida por tres compañeros.", "Hacer una estatua durante 1 minuto.", "Imitar a un perro durante 20 segundos.", "Caminar de un lado a otro del salón mientras gritás 5 cosas buenas de la persona que tengas a la derecha.", "Cantar el himno de tu país como si fuera una canción de rock.", "Hacer una mímica de una película para que la clase adivine.", "Hacer 20 saltitos mientras decís tu nombre.", "Caminar como un pingüino durante 1 minuto.", "Hacer una entrevista ficticia a un compañero.", "Resolver una adivinanza inventada por un compañero.", "Actuar como si fueras un famoso llegando a una alfombra roja.", "Ponerte de pie y cantar 10 palabras que rimen con una palabra elegida por el grupo.", "Cantar una canción con voz de bebé.", "Hacer una mini exposición sobre tu animal favorito.", "Hacer una coreografía inventada de 30 segundos.", "Hacer 15 sentadillas mientras el grupo cuenta.", "Hacer 15 saltos en un pie.", "Imitar a un profesor dando una prueba sorpresa.", "Inventar un nombre para una escuela imaginaria.", "Hablar con voz extremadamente grave durante 2 minutos.", "Imitar a un personaje de dibujos animados.", "Hacer como si estuvieras en una película de acción.", "Hablar durante 2 minutos sin utilizar la palabra \"yo\".", "Cantar una canción sin pronunciar las palabras correctamente.", "Dibujar una casa en el pizarrón con la mano no dominante.", "Hacer una pose de superhéroe durante 30 segundos.", "Bailar como un robot durante 30 segundos.", "Pasar al frente del salón y gritar, con mucha emoción, 10 países en menos de 20 segundos.", "Hacer una escena de telenovela con un compañero.", "Inventar una mascota para la clase y dibujarla.", "Imitar una gallina durante 20 segundos.", "Hacer una mini publicidad para vender un lápiz.", "Hablar como si fueras un locutor de radio durante un minuto.", "Hacer una declaración dramática de amor a tu mochila.", "Cantar una canción elegida por el grupo mientras hacés sentadillas.", "Pasar al frente y contar el nombre de cinco compañeros y una cualidad de cada uno.", "Caminar como un pato alrededor de tu banco.", "Caminar hacia atrás 10 pasos con cuidado.", "Inventar una nueva regla para el salón.", "Actuar como un profesor enojado durante 30 segundos.", "Hacer una imitación de un compañero sin hablar.", "Inventar un baile ridículo y enseñárselo a un compañero.", "Pasar al pizarrón y escribir 10 objetos que puedan encontrarse en una mochila.", "Cantar una canción como si fueras un cantante de ópera.", "Hablar muy rápido durante 30 segundos.", "Imitar a un mono durante 20 segundos.", "Hacer una pose de estatua que el grupo elija.", "Contar una historia utilizando tres palabras elegidas por la clase.", "Hablar durante un minuto con voz de dibujo animado.", "Bailar durante 30 segundos con los movimientos elegidos por el grupo.", "Hacer una escena de película romántica con una silla.", "Escribir una frase motivadora en el pizarrón.", "Bailar durante 30 segundos mientras el grupo elige los movimientos.", "Pararte frente a la clase y deletrear bailando 10 nombres de personas que empiecen con la misma letra.", "Hacer una mímica de un deporte.", "Cantar \"Feliz cumpleaños\" como si fuera una canción de reguetón.", "Imitar a un animal elegido por el grupo.", "Actuar como si estuvieras en un partido de fútbol y hubieras hecho un gol.", "Hacer como si fueras locutor de radio y anunciar una frase difícil tres veces rápidamente.", "Hablar como un bebé durante 3 minutos.", "Hablar como un robot durante 3 minutos.", "Imitar un caballo durante 20 segundos.", "Dibujar un personaje inventado en el pizarrón.", "Hacer un rap improvisado usando tres palabras que diga el grupo.", "Inventar un rap de 30 segundos sobre la escuela.", "Bailar como un pingüino durante 20 segundos.", "Hacer una reverencia cada vez que alguien diga \"sí\" durante 5 minutos.", "Hacer una reverencia y cantar 10 cosas que se puedan encontrar en un salón.", "Cantar una canción con los ojos cerrados.", "Hacer una mini exposición sobre un objeto que esté en tu mochila.", "Hacer una escena de discusión con una silla.", "Cantar \"Feliz cumpleaños\" como si fuera una ópera.", "Actuar como si fueras un influencer haciendo un video.", "Hacer una mímica de una profesión.", "Imitar a un profesor y explicar una materia inventada.", "Caminar de un lado a otro del salón mientras gritás tres cosas positivas de la persona que tengas a la izquierda.", "Inventar un saludo secreto con un compañero.", "Bailar como un abuelo durante 20 segundos.", "Hacer una cara graciosa durante 30 segundos.", "Cantar una canción con voz extremadamente grave.", "Hablar durante un minuto usando solamente frases de tres palabras.", "Hacer una declaración de amor falsa a un compañero elegido por el grupo.", "Dibujar un animal mezclando dos animales diferentes.", "Caminar como un zombie alrededor de tu banco.", "Hacer una mini entrevista a un compañero.", "Imitar a un profesor durante 30 segundos con respeto.", "Imitar a un perro que acaba de ver a su dueño.", "Ponerte de pie y cantar 10 colores sin repetir.", "Hacer una publicidad para vender una lapicera.", "Hacer 10 saltos de tijera mientras cuentas en voz alta.", "Bailar durante 30 segundos sin usar los brazos.", "Inventar un nombre para una materia que no exista.", "Hablar como un presentador de noticias durante 2 minutos.", "Hacer una publicidad de 30 segundos para una goma de borrar.", "Hacer una escena de terror porque viste un fantasma imaginario.", "Cantar una canción como si estuvieras en un estadio.", "Hacer equilibrio en un pie durante 30 segundos.", "Pasar al frente del salón y gritar, con mucha emoción, 10 palabras que empiecen con la letra M.", "Imitar a un loro repitiendo todo lo que diga un compañero durante 30 segundos.", "Hacer una mímica de una película de terror.", "Actuar como un profesor que perdió la paciencia.", "Escribir una frase en el pizarrón con la mano no dominante.", "Hablar como un narrador de fútbol durante 1 minuto.", "Inventar un rap sobre el compañero que tengas más cerca.", "Inventar una historia sobre algo que haya dentro del salón.", "Bailar como si estuvieras en un videoclip.", "Hacer una pose de ganador durante 20 segundos.", "Cantar una canción usando una voz extremadamente aguda.", "Pasar al frente y contar cinco cosas por las que estás agradecido.", "Caminar como un cangrejo durante 15 segundos.", "Hacer una escena romántica con una mochila.", "Caminar como un dinosaurio durante 30 segundos.", "Imitar a una vaca durante 20 segundos.", "Imitar a un cantante famoso.", "Inventar una canción de 4 versos sobre la clase.", "Actuar como si acabaras de perder una final mundial.", "Pasar al pizarrón y escribir 10 palabras que terminen con la misma letra.", "Hablar con acento argentino durante 2 minutos.", "Hacer una mímica de una película que elija el grupo.", "Cantar una canción como si estuvieras muy enojado.", "Bailar durante 20 segundos con movimientos inventados por el grupo.", "Hacer una imitación de un compañero que elija el grupo.", "Pararte frente a la clase y deletrear bailando tres cualidades de un compañero elegido por el grupo.", "Hacer una mini exposición sobre tu hobby.", "Imitar a un bebé que tiene sueño.", "Inventar un grito de guerra para la clase.", "Hacer una escena de película de acción usando solamente movimientos lentos.", "Hablar con voz muy grave durante 2 minutos.", "Cantar el estribillo de una canción mientras hacés sentadillas.", "Hacer una mímica de un animal y dejar que la clase adivine.", "Hablar como un villano de película durante 2 minutos.", "Dibujar una caricatura de un compañero, con respeto.", "Hacer como si fueras locutor de radio y anunciar 10 países que empiecen con letras diferentes.", "Bailar como un robot sin mover la cabeza.", "Hacer una estatua durante 45 segundos.", "Imitar un animal elegido por el profesor.", "Hacer una publicidad para vender una goma de borrar.", "Inventar una noticia absurda y presentarla como periodista.", "Caminar como un pato durante 30 segundos.", "Actuar como si te hubieran descubierto haciendo una travesura.", "Hacer una reverencia y cantar 10 palabras relacionadas con la escuela.", "Hacer una mini publicidad para vender tu mochila.", "Caminar como un pingüino durante 30 segundos.", "Hablar como un bebé durante 2 minutos.", "Hacer una mímica de una profesión elegida por el grupo.", "Inventar un grito de guerra y hacerlo frente a la clase.", "Escribir una frase graciosa en el pizarrón.", "Inventar una historia usando las palabras \"escuela\", \"pizza\" y \"cohete\".", "Imitar a un profesor durante 1 minuto.", "Imitar a un animal durante 30 segundos.", "Bailar sin música durante 30 segundos.", "Hacer una pose de modelo durante 20 segundos.", "Caminar de un lado a otro del salón mientras gritás 10 comidas sin repetir.", "Actuar como si fueras un presentador de circo.", "Hacer una mini exposición sobre tu película favorita.", "Imitar un gallo durante 20 segundos.", "Cantar el estribillo de una canción elegida por un compañero.", "Hacer una escena de amor con una silla.", "Hablar como un presentador de televisión durante 2 minutos.", "Hacer 20 saltitos mientras decís una frase.", "Inventar un personaje y presentarlo a la clase.", "Hablar con acento mexicano durante 2 minutos.", "Dibujar algo que el grupo elija con los ojos cerrados.", "Imitar a un mono durante 30 segundos.", "Hacer una mímica de una situación cotidiana.", "Hacer una coreografía de 30 segundos.", "Ponerte de pie y cantar 10 nombres de animales en menos de 15 segundos.", "Actuar como si hubieras visto un fantasma.", "Bailar durante 30 segundos sin mover los brazos.", "Hacer una reverencia cada vez que alguien diga tu apellido durante 5 minutos.", "Escribir 15 veces: \"Hoy tuve mala suerte\".", "Hacer una imitación de un compañero sin decir palabras.", "Cantar una canción usando solamente sonidos.", "Bailar como un abuelo durante 30 segundos.", "Hacer una mini exposición sobre por qué deberían existir recreos más largos.", "Inventar una canción sobre el profesor y cantarla."], "escuela": ["Contar un chiste.", "Pasar al pizarrón y dibujar un retrato rápido del profesor en 15 segundos.", "Inventar una historia de 5 oraciones.", "Ponerte de pie y recitar de memoria el estribillo de tu canción favorita.", "Dibujar con la mano no dominante.", "Pasar al pizarrón y escribir una frase motivadora para todo el grupo.", "Ponerte de pie y cantar el abecedario al revés (hasta donde puedas).", "Hacer la imitación del sonido de una sirena de ambulancia al frente de la clase.", "Pasar al frente del salón y gritar, con mucha emoción, un trabalenguas.", "Ponerte de pie e inventar un grito de guerra o lema gracioso para tu clase.", "Ayudar a tres compañeros.", "Pasar al pizarrón y dibujar la caricatura de un animal en 10 segundos.", "Ordenar un rincón del salón.", "Ponerte de pie y cantar cuál es tu pasatiempo favorito y por qué (con toda la actitud de artista).", "Pasar al frente y contar 10 animales sin repetir.", "Pedirle a tres compañeros que te digan una palabra al azar y formar una frase con ellas.", "Pasar al pizarrón y escribir 10 frutas.", "Caminar de un extremo al otro del salón con un cuaderno en la cabeza.", "Encontrar cinco objetos azules.", "Recitar un trabalenguas rápido tres veces seguidas sin equivocarte.", "Ser el ayudante de la maestra por 10 minutos.", "Pasar al pizarrón y escribir el título de tu película o serie favorita.", "Escribir una palabra por cada vocal.", "Actuar como un locutor de radio presentando la hora al frente del salón.", "Hacer una carrera de equilibrio con un libro en la cabeza.", "Pararte al frente y dar un discurso de agradecimiento ficticio como si ganaras un premio.", "Resolver una cuenta mental.", "Elegir a un compañero y cantarle un cumplido.", "Cantar un pedacito de una canción.", "Actuar como un vendedor de infomerciales vendiendo un borrador al frente del grupo.", "Bailar 30 segundos.", "Pararte frente a la clase y deletrear bailando una virtud que consideres que define a todo el grupo de clase.", "Hacer la imitación de un animal.", "Actuar como si fueras un guía turístico mostrando el salón de clases.", "Hablar con voz de bebé durante 3 minutos.", "Pasar al pizarrón y escribir con la mano no dominante.", "Hacer 10 saltos de tijera.", "Pasar al pizarrón y escribir una palabra en efecto espejo.", "Hacer como si fueras locutor de radio y anunciar un trabalenguas sin equivocarse.", "Hacer la caminata de un zombie clásico de película por el pasillo central.", "Dibujar algo en el pizarrón con los ojos cerrados.", "Pasar al pizarrón y escribir tres objetivos personales para este año.", "Hacer una mímica para que la clase adivine.", "Ponerte de pie y responder: \"¿Qué es lo que más te gusta del grupo?\".", "Hacer una reverencia y cantar el abecedario lo más rápido posible.", "Pasar al pizarrón y escribir el año de tu nacimiento en números romanos.", "Caminar de un lado a otro del salón mientras gritás 10 países en menos de 30 segundos.", "Pasar al pizarrón y dibujar un meme clásico para que el grupo adivine cuál es.", "Ponerte de pie y cantar 5 cualidades de un compañero.", "Pararte al frente del salón y recitar un poema corto con voz dramática.", "Hacer una pose graciosa durante 20 segundos.", "Pararte al frente y actuar como un meteorólogo dando el pronóstico del tiempo.", "Caminar como un pingüino hasta la puerta y volver.", "Actuar como si entregaras un premio de honor al grupo al frente del salón.", "Inventar un minicuento de un minuto.", "Pararte al frente y actuar como un locutor presentando a tu grupo de clase.", "Pasar al frente del salón y gritar, con mucha emoción, 10 palabras que empiecen con la misma letra.", "Pararte al frente y simular que diriges una orquesta con intensidad.", "Hacer una reverencia cada vez que alguien diga su nombre durante 5 minutos.", "Ponerte de pie y contar qué fue lo más gracioso que te pasó esta semana.", "Imitar a un profesor (con respeto).", "Pasar al frente y contar tres cualidades positivas del compañero que tienes a la izquierda.", "Resolver una adivinanza que le haga la clase.", "Sostener una goma de borrar sobre tu cabeza sin que se caiga mientras das una vuelta a tu banco.", "Hacer equilibrio en un pie durante 20 segundos.", "Pararte al frente del salón y hacer una pose de estatua durante 15 segundos.", "Hablar como si fuera un presentador de televisión por un minuto.", "Pasar al pizarrón y escribir qué tres cosas te llevarías a una isla desierta.", "Pararte frente a la clase y deletrear bailando un agradecimiento al grupo.", "Imitar el mugido de una vaca.", "Hacer una estatua durante 30 segundos sin moverse.", "Hacer como si fueras locutor de radio y anunciar en voz alta cuál es tu género musical preferido.", "Elegir a otro compañero para hacer una prenda divertida junto con él (como bailar o hacer una mímica).", "Imitar el sonido de una moto acelerando a toda velocidad.", "Adivina el animal que un compañero imita.", "Hacer una reverencia y cantar cuál es el animal que más te da miedo y porque.", "inventar un saludo.", "Pararte frente a la clase y contar qué talento te gustaría aprender este año.", "contar un dato curioso.", "Imitar la caminata de un pingüino dando tres pasos hacia adelante.", "inventar una palabra.", "Pararte arriba de tu banco y hacer una pose de modelo durante 10 segundos.", "inventa una comida que no exista.", "Cantar el estribillo de una canción que elija el grupo.", "habla muy lento por un minuto.", "Bailar durante 20 segundos sin poner música.", "responde todo cantando durante 30 segundos.", "Hacer una imitación de un compañero hasta que adivinen quién es.", "comunícate solo con gestos por 10 minutos.", "Hablar con voz de bebé durante 2 minutos.", "haz una adivinanza para el grupo.", "Caminar por el salón como un modelo de pasarela.", "Caminar de un lado a otro del salón mientras gritás 10 objetos que hayan en un salón.", "Hacer 10 sentadillas mientras el grupo cuenta.", "inventa un lugar al que te gustaría viajar y explica por qué.", "Cantar \"Feliz cumpleaños\" como si estuvieras en una ópera.", "Ponerte de pie y cantar una ciudad o un país por cada letra de tu nombre (las que puedas).", "Hacer una declaración de amor falsa a una silla.", "imitar al primer animal que te imagines.", "Hablar durante un minuto con acento español.", "camina como el piso fuera de lava durante 20 segundos.", "Hacer la imitación de un profesor durante 30 segundos.", "imita a un cantante famoso.", "Bailar una canción imaginaria elegida por el grupo.", "mantén una sonrisa durante un minuto.", "Hacer 15 saltitos en el lugar.", "Pasar al frente del salón y gritar, con mucha emoción, tres cosas que te gusten de la escuela.", "Recitar el abecedario mientras hacés una pose diferente con cada letra.", "haz una pregunta graciosa a un compañero.", "Hacer una escena dramática porque se te rompió el lápiz.", "haz un baile de celebración por haber ahorrado.", "Cantar una canción usando solamente \"la la la\".", "saluda en un idioma inventado.", "Hacer una imitación de un animal elegido por el grupo.", "inventa una mascota para la escuela.", "Caminar en cuatro patas durante 10 segundos.", "Pasar al frente y contar cuál es tu comida favorita y porque.", "Hacer una presentación de vos mismo como si fueras una celebridad.", "haz una cadena de 5 palabras que estén relacionadas.", "Inventar una canción sobre el profesor y cantarla durante 20 segundos.", "10 minutos menos de recreo.", "Bailar como robot durante 20 segundos.", "Hacer dos ejercicios extra de deberes.", "Hacer 10 abdominales.", "Barrer el salón al terminar la clase.", "Pedirle matrimonio de mentira a un compañero elegido por el grupo.", "Ordenar el aula.", "Hablar como robot durante 2 minutos.", "Borrar el pizarrón toda la semana.", "Hacer una imitación exagerada de alguien de la clase.", "Juntar los papeles del piso al final del día.", "Cantar una canción triste con una sonrisa.", "Acomodar las sillas antes de irse.", "Hacer una coreografía improvisada de 20 segundos.", "Ser el encargado de repartir los cuadernos.", "Hacer 10 flexiones contra la pared.", "Escribir 20 veces: \"Hoy tendré más suerte\".", "Actuar como si acabaras de ganar la lotería.", "Hacer una vuelta al patio caminando como pingüino.", "Caminar como un pingüino durante 20 segundos.", "Llevar una corona de \"Rey/Reina de la mala suerte\" durante una clase.", "Hacer una escena de película de terror con un compañero.", "Usar una nariz de payaso por 10 minutos (si el colegio lo permite).", "Cantar una canción que el grupo elija.", "Cantar una canción antes de empezar la siguiente ronda del juego.", "Hablar durante un minuto sin usar la letra \"A\".", "Hacer 15 sentadillas.", "Pasar al pizarrón y escribir un cumplido a cinco compañeros diferentes.", "Imitar a un bebé que quiere su mamadera.", "Dibujar una caricatura de sí mismo.", "Hacer una publicidad de 30 segundos para tu mochila.", "Escribir una mini historia de 5 renglones con tres palabras elegidas por el grupo.", "Bailar como si estuvieras en una fiesta durante 20 segundos.", "Permanecer un turno sin participar en el siguiente juego.", "Hacer una escena de pelea imaginaria con una silla.", "Hacer una mini exposición de un minuto sobre un tema absurdo (por ejemplo: \"¿Por qué las medias desaparecen?\").", "Pararte frente a la clase y deletrear bailando un trabalenguas cinco veces rápido.", "Ayudar al docente a repartir materiales durante la clase.", "Hablar como un presentador de televisión durante un minuto.", "Hacer un cartel divertido que diga \"Hoy no tuve suerte\" y llevarlo 5 minutos.", "Hacer 20 saltos en el lugar.", "Limpiar su banco y el de un compañero.", "Cantar una canción con voz de anciano.", "Hacer 20 saltos de tijera.", "Hacer una declaración de amor a un objeto del salón.", "Hablar con voz de robot durante 5 minutos.", "Imitar a un gato durante 20 segundos.", "Cantar el estribillo de una canción elegida por el grupo.", "Hacer una entrada triunfal al salón y saludar como una estrella.", "Hacer una mímica para que dos compañeros adivinen.", "Bailar sin mover los pies durante 20 segundos.", "Ordenar los útiles de tres compañeros.", "Escribir 10 veces: \"La próxima tendré más suerte\".", "Actuar como si estuvieras dando una clase a niños de jardín.", "Hacer una pose graciosa cada vez que alguien diga tu nombre durante 5 minutos.", "Cantar una canción como si estuvieras llorando.", "Caminar como un robot durante 1 minuto.", "Hacer una imitación de un famoso elegido por el grupo.", "Hacer como si fueras locutor de radio y anunciar 15 animales sin repetir.", "Caminar como un zombie durante 20 segundos.", "Hacer una reverencia y cantar 15 frutas sin repetir.", "Hacer 15 sentadillas mientras cantás.", "Dibujar un animal con los ojos cerrados.", "Inventar un rap de 30 segundos sobre la clase.", "Hacer 20 sentadillas.", "Hablar como un villano durante 2 minutos.", "Hablar como un presentador de radio durante 2 minutos.", "Hacer una escena dramática porque perdiste una goma.", "Inventar una canción sobre la escuela y cantarla.", "Bailar una canción imaginaria elegida por tres compañeros.", "Hacer una estatua durante 1 minuto.", "Imitar a un perro durante 20 segundos.", "Caminar de un lado a otro del salón mientras gritás 5 cosas buenas de la persona que tengas a la derecha.", "Cantar el himno de tu país como si fuera una canción de rock.", "Hacer una mímica de una película para que la clase adivine.", "Hacer 20 saltitos mientras decís tu nombre.", "Caminar como un pingüino durante 1 minuto.", "Hacer una entrevista ficticia a un compañero.", "Resolver una adivinanza inventada por un compañero.", "Actuar como si fueras un famoso llegando a una alfombra roja.", "Ponerte de pie y cantar 10 palabras que rimen con una palabra elegida por el grupo.", "Cantar una canción con voz de bebé.", "Hacer una mini exposición sobre tu animal favorito.", "Hacer una coreografía inventada de 30 segundos.", "Hacer 15 sentadillas mientras el grupo cuenta.", "Hacer 15 saltos en un pie.", "Imitar a un profesor dando una prueba sorpresa.", "Inventar un nombre para una escuela imaginaria.", "Hablar con voz extremadamente grave durante 2 minutos.", "Imitar a un personaje de dibujos animados.", "Hacer como si estuvieras en una película de acción.", "Hablar durante 2 minutos sin utilizar la palabra \"yo\".", "Cantar una canción sin pronunciar las palabras correctamente.", "Dibujar una casa en el pizarrón con la mano no dominante.", "Hacer una pose de superhéroe durante 30 segundos.", "Bailar como un robot durante 30 segundos.", "Pasar al frente del salón y gritar, con mucha emoción, 10 países en menos de 20 segundos.", "Hacer una escena de telenovela con un compañero.", "Inventar una mascota para la clase y dibujarla.", "Imitar una gallina durante 20 segundos.", "Hacer una mini publicidad para vender un lápiz.", "Hablar como si fueras un locutor de radio durante un minuto.", "Hacer una declaración dramática de amor a tu mochila.", "Cantar una canción elegida por el grupo mientras hacés sentadillas.", "Pasar al frente y contar el nombre de cinco compañeros y una cualidad de cada uno.", "Caminar como un pato alrededor de tu banco.", "Caminar hacia atrás 10 pasos con cuidado.", "Inventar una nueva regla para el salón.", "Actuar como un profesor enojado durante 30 segundos.", "Hacer una imitación de un compañero sin hablar.", "Inventar un baile ridículo y enseñárselo a un compañero.", "Pasar al pizarrón y escribir 10 objetos que puedan encontrarse en una mochila.", "Cantar una canción como si fueras un cantante de ópera.", "Hablar muy rápido durante 30 segundos.", "Imitar a un mono durante 20 segundos.", "Hacer una pose de estatua que el grupo elija.", "Contar una historia utilizando tres palabras elegidas por la clase.", "Hablar durante un minuto con voz de dibujo animado.", "Bailar durante 30 segundos con los movimientos elegidos por el grupo.", "Hacer una escena de película romántica con una silla.", "Escribir una frase motivadora en el pizarrón.", "Bailar durante 30 segundos mientras el grupo elige los movimientos.", "Pararte frente a la clase y deletrear bailando 10 nombres de personas que empiecen con la misma letra.", "Hacer una mímica de un deporte.", "Cantar \"Feliz cumpleaños\" como si fuera una canción de reguetón.", "Imitar a un animal elegido por el grupo.", "Actuar como si estuvieras en un partido de fútbol y hubieras hecho un gol.", "Hacer como si fueras locutor de radio y anunciar una frase difícil tres veces rápidamente.", "Hablar como un bebé durante 3 minutos.", "Hablar como un robot durante 3 minutos.", "Imitar un caballo durante 20 segundos.", "Dibujar un personaje inventado en el pizarrón.", "Hacer un rap improvisado usando tres palabras que diga el grupo.", "Inventar un rap de 30 segundos sobre la escuela.", "Bailar como un pingüino durante 20 segundos.", "Hacer una reverencia cada vez que alguien diga \"sí\" durante 5 minutos.", "Hacer una reverencia y cantar 10 cosas que se puedan encontrar en un salón.", "Cantar una canción con los ojos cerrados.", "Hacer una mini exposición sobre un objeto que esté en tu mochila.", "Hacer una escena de discusión con una silla.", "Cantar \"Feliz cumpleaños\" como si fuera una ópera.", "Actuar como si fueras un influencer haciendo un video.", "Hacer una mímica de una profesión.", "Imitar a un profesor y explicar una materia inventada.", "Caminar de un lado a otro del salón mientras gritás tres cosas positivas de la persona que tengas a la izquierda.", "Inventar un saludo secreto con un compañero.", "Bailar como un abuelo durante 20 segundos.", "Hacer una cara graciosa durante 30 segundos.", "Cantar una canción con voz extremadamente grave.", "Hablar durante un minuto usando solamente frases de tres palabras.", "Hacer una declaración de amor falsa a un compañero elegido por el grupo.", "Dibujar un animal mezclando dos animales diferentes.", "Caminar como un zombie alrededor de tu banco.", "Hacer una mini entrevista a un compañero.", "Imitar a un profesor durante 30 segundos con respeto.", "Imitar a un perro que acaba de ver a su dueño.", "Ponerte de pie y cantar 10 colores sin repetir.", "Hacer una publicidad para vender una lapicera.", "Hacer 10 saltos de tijera mientras cuentas en voz alta.", "Bailar durante 30 segundos sin usar los brazos.", "Inventar un nombre para una materia que no exista.", "Hablar como un presentador de noticias durante 2 minutos.", "Hacer una publicidad de 30 segundos para una goma de borrar.", "Hacer una escena de terror porque viste un fantasma imaginario.", "Cantar una canción como si estuvieras en un estadio.", "Hacer equilibrio en un pie durante 30 segundos.", "Pasar al frente del salón y gritar, con mucha emoción, 10 palabras que empiecen con la letra M.", "Imitar a un loro repitiendo todo lo que diga un compañero durante 30 segundos.", "Hacer una mímica de una película de terror.", "Actuar como un profesor que perdió la paciencia.", "Escribir una frase en el pizarrón con la mano no dominante.", "Hablar como un narrador de fútbol durante 1 minuto.", "Inventar un rap sobre el compañero que tengas más cerca.", "Inventar una historia sobre algo que haya dentro del salón.", "Bailar como si estuvieras en un videoclip.", "Hacer una pose de ganador durante 20 segundos.", "Cantar una canción usando una voz extremadamente aguda.", "Pasar al frente y contar cinco cosas por las que estás agradecido.", "Caminar como un cangrejo durante 15 segundos.", "Hacer una escena romántica con una mochila.", "Caminar como un dinosaurio durante 30 segundos.", "Imitar a una vaca durante 20 segundos.", "Imitar a un cantante famoso.", "Inventar una canción de 4 versos sobre la clase.", "Actuar como si acabaras de perder una final mundial.", "Pasar al pizarrón y escribir 10 palabras que terminen con la misma letra.", "Hablar con acento argentino durante 2 minutos.", "Hacer una mímica de una película que elija el grupo.", "Cantar una canción como si estuvieras muy enojado.", "Bailar durante 20 segundos con movimientos inventados por el grupo.", "Hacer una imitación de un compañero que elija el grupo.", "Pararte frente a la clase y deletrear bailando tres cualidades de un compañero elegido por el grupo.", "Hacer una mini exposición sobre tu hobby.", "Imitar a un bebé que tiene sueño.", "Inventar un grito de guerra para la clase.", "Hacer una escena de película de acción usando solamente movimientos lentos.", "Hablar con voz muy grave durante 2 minutos.", "Cantar el estribillo de una canción mientras hacés sentadillas.", "Hacer una mímica de un animal y dejar que la clase adivine.", "Hablar como un villano de película durante 2 minutos.", "Dibujar una caricatura de un compañero, con respeto.", "Hacer como si fueras locutor de radio y anunciar 10 países que empiecen con letras diferentes.", "Bailar como un robot sin mover la cabeza.", "Hacer una estatua durante 45 segundos.", "Imitar un animal elegido por el profesor.", "Hacer una publicidad para vender una goma de borrar.", "Inventar una noticia absurda y presentarla como periodista.", "Caminar como un pato durante 30 segundos.", "Actuar como si te hubieran descubierto haciendo una travesura.", "Hacer una reverencia y cantar 10 palabras relacionadas con la escuela.", "Hacer una mini publicidad para vender tu mochila.", "Caminar como un pingüino durante 30 segundos.", "Hablar como un bebé durante 2 minutos.", "Hacer una mímica de una profesión elegida por el grupo.", "Inventar un grito de guerra y hacerlo frente a la clase.", "Escribir una frase graciosa en el pizarrón.", "Inventar una historia usando las palabras \"escuela\", \"pizza\" y \"cohete\".", "Imitar a un profesor durante 1 minuto.", "Imitar a un animal durante 30 segundos.", "Bailar sin música durante 30 segundos.", "Hacer una pose de modelo durante 20 segundos.", "Caminar de un lado a otro del salón mientras gritás 10 comidas sin repetir.", "Actuar como si fueras un presentador de circo.", "Hacer una mini exposición sobre tu película favorita.", "Imitar un gallo durante 20 segundos.", "Cantar el estribillo de una canción elegida por un compañero.", "Hacer una escena de amor con una silla.", "Hablar como un presentador de televisión durante 2 minutos.", "Hacer 20 saltitos mientras decís una frase.", "Inventar un personaje y presentarlo a la clase.", "Hablar con acento mexicano durante 2 minutos.", "Dibujar algo que el grupo elija con los ojos cerrados.", "Imitar a un mono durante 30 segundos.", "Hacer una mímica de una situación cotidiana.", "Hacer una coreografía de 30 segundos.", "Ponerte de pie y cantar 10 nombres de animales en menos de 15 segundos.", "Actuar como si hubieras visto un fantasma.", "Bailar durante 30 segundos sin mover los brazos.", "Hacer una reverencia cada vez que alguien diga tu apellido durante 5 minutos.", "Escribir 15 veces: \"Hoy tuve mala suerte\".", "Hacer una imitación de un compañero sin decir palabras.", "Cantar una canción usando solamente sonidos.", "Bailar como un abuelo durante 30 segundos.", "Hacer una mini exposición sobre por qué deberían existir recreos más largos.", "Inventar una canción sobre el profesor y cantarla."], "general": ["Contá un chiste en voz alta.", "Bailá durante 30 segundos sin música.", "Imitá a un gato durante 30 segundos.", "Hacé 10 sentadillas.", "Hablá como si fueras un presentador de televisión durante 2 minutos.", "Inventá un comercial para vender una cuchara.", "Caminá como un pingüino durante 1 minuto.", "Decí el abecedario lo más rápido que puedas.", "Hacé una pose de superhéroe durante 30 segundos.", "Saludá a la próxima persona que veas como si fuera famosa.", "Inventá una palabra y explicá en voz alta qué significa.", "Cantá el feliz cumpleaños con voz de ópera.", "Hablá durante 30 segundos usando una voz completamente diferente a la tuya.", "Imitá a el pingüino de Batman", "Decí cinco frutas en menos de cinco segundos.", "Hacé equilibrio en un pie durante 30 segundos.", "Inventá un apretón de manos.", "Hablá susurrando durante un minuto.", "Contá una anécdota graciosa.", "Caminá en cámara lenta durante un minuto.", "Dibujá un sol con los ojos cerrados.", "Decí tres trabalenguas seguidos.", "Imitá a un robot durante un minuto.", "Hacé un desfile como si estuvieras en una pasarela.", "Inventá un nuevo saludo.", "Actuá como si hubieras ganado un premio importante.", "Decí el nombre de cinco países.", "Fingí que sos un detective buscando pistas.", "Posá como si estuvieras en una sesión de fotos durante 20 segundos.", "Sonreí sin parar durante un minuto.", "Imitá a una gallina.", "Inventá una receta con ingredientes disparatados.", "Decí el nombre de diez colores.", "Caminá hacia atrás durante 20 pasos.", "Hacé una estatua durante 30 segundos.", "Contá hasta 20 con voz de dibujo animado.", "Inventá un refrán gracioso.", "Fingí que sos un meteorólogo dando el pronóstico.", "Inventá un baile de 20 segundos y hacelo en el lugar.", "Hacé una mímica de una película que conozcas durante 30 segundos.", "Decí una palabra que empiece con cada vocal.", "Cantá una canción usando solo la sílaba \"la\".", "Actuá como un vendedor ambulante por un minuto.", "Hacé cinco saltos en el lugar.", "Imitá a un perro feliz.", "Inventá un baile con tres pasos.", "Decí cinco comidas sin repetir la primera letra.", "Pone cara seria frente a un espejo sin reírte por 1 minuto", "Caminá como si el piso fuera de gelatina.", "Hacé de comentarista de una carrera imaginaria.", "Caminá como si estuvieras desfilando por una pasarela durante 10 segundos.", "Inventá un nombre para un planeta.", "Hacé una ola con los brazos.", "Fingí que descubriste un tesoro.", "Decí el nombre de cinco deportes.", "Imitá el sonido de tres animales.", "Actuá como un chef famoso preparando un sándwich.", "Hacé un aplauso creativo.", "Decí una frase al revés lo mejor que puedas.", "Caminá con pasos gigantes durante un minuto.", "Inventá un nombre para un superhéroe y decilo en voz alta.", "Hacé una mímica de un oficio.", "Decí cinco cosas azules.", "Bailá como si estuvieras en un videoclip.", "Hacé una risa exagerada.", "Fingí que sos un guía turístico mostrando tu casa.", "Decí un trabalenguas sin equivocarte.", "Imitá a un mono durante 30 segundos.", "Contá una historia usando solo cinco oraciones.", "Saludá como si estuvieras en otro planeta.", "Hacé una pose graciosa para una foto imaginaria.", "Inventá un nuevo deporte y explicá las reglas.", "Actuá como si estuvieras filmando una película de acción.", "Decí tres palabras difíciles sin trabarte.", "Festejá durante 10 segundos como si hubieras ganado un campeonato.", "Poné $10 extra en la alcancía por buena onda.", "Convencé a alguien de ahorrar contigo esta semana.", "Inventá el título de una película sobre tu vida.", "Hacé 15 saltitos en un pie.", "Inventá un nuevo grito de victoria.", "Decí tres cosas por las que vale la pena ahorrar.", "Caminá como un cangrejo durante 30 segundos.", "Hacé una mímica de una profesión durante 10 segundos.", "Decí el nombre de 10 animales.", "Aplaudí como si hubieras visto el mejor gol de la historia.", "Hacé una pose de estatua por un minuto.", "Inventá un nombre para una alcancía famosa.", "Cantá una canción cambiando todas las vocales por \"i\".", "Hacé 12 sentadillas.", "Contá una historia usando las palabras \"mate\", \"bicicleta\" y \"helado\".", "Sonreí durante un minuto sin hablar.", "Decí cinco cosas que nunca llevarías a una isla.", "Saludá como un astronauta.", "Imitá a alguien que acaba de ganar la lotería.", "Inventá una frase motivadora para ahorrar.", "Hacé un baile de 20 segundos con movimientos inventados.", "Decí el abecedario sin mover las manos.", "Hacé una pose épica y mantenela durante 5 segundos.", "Caminá como si tuvieras botas gigantes.", "Agregá una moneda a la alcancía y decí: \"¡Que siga creciendo!\"", "Hacé de relator contando cómo alguien abre una puerta.", "Decí cinco comidas típicas.", "Inventá un superhéroe del ahorro.", "Hacé equilibrio en un pie contando hasta 25.", "Imitá el sonido de una moto.", "Decí tres cosas que llevarías a una isla desierta.", "Hacé una reverencia exagerada como si estuvieras terminando una obra de teatro.", "Decí cinco palabras que rimen entre sí.", "Inventá una mascota para la alcancía.", "Cantá el feliz cumpleaños como si fueras un rockero.", "Caminá como un robot descompuesto.", "Decí tres metas que te gustaría cumplir.", "Hacé una cara de sorpresa durante 20 segundos.", "Imitá a un locutor de radio.", "Contá hasta 30 sin equivocarte.", "Inventá una canción de dos líneas sobre ahorrar.", "Hacé cinco aplausos con distintos ritmos.", "Decí un trabalenguas inventado.", "Hacé una mímica de un deporte.", "Si tenés una moneda, ponela en la alcancía.", "Actuá como un explorador buscando un tesoro.", "Decí el nombre de cinco ciudades.", "Hacé un desfile como modelo profesional.", "Inventá un baile para festejar cuando la alcancía se llena.", "Hacé 10 saltos con los pies juntos.", "Imitá una sirena de ambulancia.", "Contá una historia en menos de 20 segundos.", "Decí cinco palabras que empiecen con la misma letra.", "Fingí que la alcancía acaba de hablarte.", "Inventá un eslogan para un club de ahorradores.", "Caminá en puntas de pie durante un minuto.", "Inventá un saludo usando solamente las manos y hacelo.", "Decí el nombre de cinco películas.", "Hacé una pose de campeón.", "Contá cuál fue una de las cosas más divertidas que te pasó este año.", "Imitá a un comentarista de cocina.", "Decí cinco objetos que haya en una casa.", "Inventá un país y su bandera.", "Hacé una mímica de un animal durante 10 segundos.", "Aplaudí durante 15 segundos sin perder el ritmo.", "Si podés, agregá otra moneda a la alcancía.", "Decí tres formas de ahorrar dinero.", "Caminá como si el piso estuviera muy caliente.", "Inventá un nombre gracioso para un banco.", "Inventá una risa de villano y mantenela durante 10 segundos.", "Decí cinco palabras relacionadas con el verano.", "Fingí que encontraste un billete de un millón de pesos.", "Elegí a alguien para que reciba un aplauso del grupo.", "Gritá lo más fuerte que puedas: \"¡Vamos por la alcancía llena!\"", "Sacate una foto divertida con la alcancía o hacé una pose de festejo junto a ella.", "Poné un apodo divertido a la alcancía.", "Decí: \"¡Cada moneda cuenta!\" con voz de narrador.", "Si tenés una moneda, sumala a la alcancía.", "Inventá un himno del ahorro de dos líneas.", "Hacé una lluvia de aplausos durante 10 segundos.", "Contá qué harías con el dinero cuando la alcancía se llene.", "Caminá como si llevaras una montaña de monedas.", "Hacé una sonrisa enorme durante 30 segundos.", "Decí cinco cosas que no comprarías por impulso.", "Imitá a un cajero diciendo: \"¡Gracias por ahorrar!\".", "Hacé 15 palmadas arriba de la cabeza.", "Inventá un saludo oficial del Club del Ahorro.", "Hablá durante un minuto como un pirata.", "Hacé una pose de campeón del ahorro.", "Inventá una anécdota completamente absurda y contala como si fuera real.", "Decí cinco cosas amarillas.", "Bailá como si hubieras encontrado un tesoro.", "Hacé una mímica de alguien buscando monedas.", "Decí tres metas para este año.", "Hacé una pose de ganador y mantenela durante 10 segundos.", "Imitá a un robot que aprendió a ahorrar.", "Decí una palabra graciosa inventada.", "Hacé equilibrio durante 20 segundos.", "Decí un trabalenguas lo más rápido que puedas.", "Caminá como un pato.", "Inventá una moneda con tu cara.", "Hacé un festejo de gol sin hacer ruido.", "Decí cinco países.", "Imitá a un gallo despertando a todos.", "Si podés, agregá otra moneda a la alcancía.", "Inventá una propaganda para ahorrar.", "Hacé 10 saltitos en el lugar.", "Decí cinco verduras.", "Hacé una pose de estatua por 40 segundos.", "Hacé una pose de estatua durante 10 segundos.", "Inventá un nombre divertido para una alcancía.", "Decí una frase motivadora.", "Hacé una caminata en cámara lenta.", "Inventá un nombre para una empresa imaginaria.", "Saludá como un rey o una reina.", "Imitá a un locutor anunciando un premio.", "Decí cinco bebidas.", "Hacé un paso de baile inventado.", "Contá una historia en 15 segundos.", "Decí tres cosas que te hacen feliz.", "Caminá como un robot durante 10 segundos.", "Imitá un pingüino apurado.", "Decí cinco palabras que empiecen con \"M\".", "Hacé tu mejor pose de foto durante 5 segundos.", "Gritá: \"¡Vamos por más monedas!\".", "Hacé un desfile imaginario con la alcancía.", "Inventá un eslogan para ahorrar.", "Decí el nombre de cinco flores.", "Hacé 10 sentadillas.", "Contá un recuerdo de la infancia.", "Imitá a un chef preparando una pizza.", "Decí cinco deportes.", "Hacé una pose de superhéroe.", "Inventá un nombre para un mes que no exista.", "Hacé una mini coreografía de 10 segundos.", "Caminá como un gigante.", "Decí cinco objetos redondos.", "Hacé una mímica de un músico.", "Inventá una canción con la palabra \"alcancía\".", "Decí tres cosas que te gustaría aprender.", "Fingí que ganaste un concurso.", "Imitá un perro contento.", "Decí cinco animales.", "Hacé un baile de festejo de 20 segundos.", "Si hay una moneda cerca, intentá convencer a alguien de ponerla en la alcancía.", "Decí cinco palabras relacionadas con el invierno.", "Caminá como si estuvieras sobre una pasarela.", "Inventá un nombre para un banco de dibujos animados.", "Sonreí y decí tres cosas que te hagan feliz.", "Prometé en voz alta que vas a seguir ahorrando para cumplir una meta.", "Salí a la puerta de tu casa y gritá: \"¡Estoy ahorrando para ser millonario!\"", "Llamá a un familiar y decile muy serio: \"Tengo una noticia importante... empecé a ahorrar.\"", "Hacé de cuenta que encontraste algo increíble dentro de una caja.", "Caminá por la casa como si fueras un guardaespaldas de la alcancía durante 2 minutos.", "Hacé una entrevista imaginaria a la alcancía.", "Decile \"gracias\" a la última moneda que pusiste.", "Hacé una vuelta olímpica alrededor de la mesa festejando un ahorro imaginario.", "Inventá un discurso de 30 segundos por haber ahorrado.", "Hablá como político prometiendo que la alcancía nunca quedará vacía.", "Inventá una moneda con un nombre y valor completamente nuevos.", "Fingí que una moneda se escapó y perseguíla por 20 segundos.", "Mirá por la ventana y gritá: \"¡No gastaré de más!\"", "Inventá una publicidad donde la alcancía es una superestrella.", "Hacé un brindis... con un vaso de agua... por el ahorro.", "Decile a alguien: \"No acepto sobornos, solo monedas para la alcancía.\"", "Hacé de periodista cubriendo \"la gran llegada de una moneda\".", "Elegí un objeto que tengas cerca y ponéle un nombre.", "Caminá como modelo llevando la alcancía en una pasarela imaginaria.", "Hacé una ceremonia de bienvenida para la próxima moneda.", "Mirate al espejo y decí: \"Vos podés ahorrar más.\"", "Inventá un rap de 20 segundos sobre no gastar todo.", "Gritá: \"¡Que viva el ahorro!\" con toda la emoción.", "Actuá como si la alcancía fuera un bebé que hay que dormir.", "Fingí que la alcancía ganó un premio internacional.", "Saludá a la alcancía con un apretón de manos imaginario.", "Hacé una caminata de explorador buscando \"monedas salvajes\".", "Contale un secreto a la alcancía.", "Decí la palabra \"ahorro\" cinco veces usando voces diferentes.", "Elegí una escoba o palo y usalo como micrófono para entrevistar a alguien sobre el ahorro.", "Inventá una frase que podría decir un gran ahorrador.", "Gritá desde una ventana (si es seguro): \"¡Hoy no gasto ni un peso!\"", "Inventá una película donde la alcancía salva al mundo.", "Hacé una coreografía de 30 segundos dedicada a las monedas.", "Decí una frase como si fueras el presentador de un programa de televisión.", "Hacé un minuto de silencio por las monedas que ya gastaste.", "Fingí que encontraste un cofre del tesoro debajo de una silla.", "Mirá una moneda y decile: \"Tu destino ya está decidido.\"", "Hacé un desfile militar protegiendo la alcancía.", "Imitá a un vendedor diciendo: \"¡Compre ahorro, lleve futuro!\"", "Hacé una reverencia antes de poner la próxima moneda.", "Inventá una palabra y explicá qué significa.", "Convencé a alguien de darte una moneda... con un discurso de ventas.", "Hacé como si la alcancía fuera tu mascota durante un minuto.", "Gritá: \"¡Las monedas no se rinden!\"", "Elegí un objeto y explicale por qué es importante ahorrar.", "Hacé una conferencia de prensa anunciando que rompiste tu récord de ahorro.", "Decí tres veces seguidas: \"No compro por impulso.\"", "Relatá en 10 segundos cómo sería una final deportiva completamente absurda.", "Caminá por la casa como si estuvieras en una misión secreta.", "Inventá un noticiero donde la noticia principal sea que alguien empezó a ahorrar.", "Hacé como si estuvieras a punto de abrir un cofre lleno de tesoros.", "Hacé una ovación para vos mismo durante 10 segundos.", "Elegí una moneda y ponéle nombre.", "Hacé de cuenta que estás atendiendo una llamada muy importante.", "Inventá una ley absurda que te gustaría que existiera.", "Decí: \"Mi billetera está orgullosa de mí.\"", "Hacé una pose de campeón sosteniendo la alcancía.", "Saludá como si fueras una persona famosa llegando a una alfombra roja.", "Inventá un grito de guerra del Club del Ahorro.", "Hacé como si estuvieras descubriendo un tesoro escondido en un cajón.", "Mirá el techo y decí: \"Las monedas me eligen a mí.\"", "Actuá como si fueras un detective investigando quién gastó de más.", "Elegí un objeto que tengas cerca e inventale un trabajo.", "Gritá: \"¡Objetivo: alcancía llena!\"", "Hacé una ceremonia de graduación para una moneda.", "Inventá un saludo secreto para los ahorradores.", "Hacé una cuenta regresiva del 10 al 1 y festejá como si hubieras ganado un premio.", "Inventá un nombre divertido para una alcancía.", "Presentá la alcancía como si fuera una celebridad en un escenario.", "Inventá un cargo importante para vos y anunciá cuál es.", "Hacé una promesa solemne de no gastar en un antojo hoy.", "Caminá como si llevaras un lingote de oro imaginario.", "Inventá un eslogan que termine con: \"...¡y a seguir ahorrando!\"", "Hacé un saludo militar frente a la alcancía.", "Levantá la alcancía (si podés) y gritá: \"¡Nos vemos cuando estés llena!\"", "Tocá timbre (si es apropiado y seguro) o golpeá una puerta y preguntá: \"¿Acá aceptan millonarios en proceso?\"", "Abrí una canilla por dos segundos y decile: \"Hoy no desperdiciamos nada.\"", "Caminá durante un minuto con un libro en la cabeza como si llevaras una fortuna.", "Inventá una excusa ridícula para no gastar plata.", "Inventá una frase motivadora sobre alcanzar tus metas.", "Hacé una reverencia antes de sentarte.", "Mirá un reloj y decile: \"El tiempo también ahorra.\"", "Hacé una llamada falsa diciendo: \"Sí, el Banco del Ahorro habla.\"", "Elegí un objeto y presentalo como si valiera un millón de dólares.", "Decí en voz alta: \"¡Hoy ganó mi yo del futuro!\"", "Hacé una caminata de campeón con las manos en la cintura.", "Inventá un comercial para vender aire premium.", "Actuá como si una moneda te hubiera contado un chisme.", "Mirá el piso y gritá: \"¡Aparecé, monedita!\"", "Hacé un brindis por las monedas que todavía no llegaron.", "Convencé a alguien de que una cuchara es un detector de monedas.", "Elegí una silla y agradecele por acompañarte en tu camino al ahorro.", "Hacé de guía turístico mostrando la alcancía como si fuera un monumento histórico.", "Decí cinco formas graciosas de llamar al dinero.", "Caminá de costado durante un minuto.", "Actuá como un pirata que encontró un tesoro... de monedas.", "Inventá una danza para atraer la buena suerte económica.", "Mirá una pared y decile: \"No me vas a convencer de gastar.\"", "Hacé una entrevista imaginaria a tu billetera.", "Hacé de cuenta que estás dando un discurso frente a miles de personas.", "Fingí que una moneda te pidió una selfie.", "Hacé una estatua con una pose graciosa durante 10 segundos.", "Caminá como si estuvieras sobre una alfombra roja.", "Elegí un vaso y proponé un brindis por el futuro.", "Hacé una pose épica durante 20 segundos sin moverte.", "Decí: \"Hoy no compro... hoy progreso.\"", "Decí una frase como si fueras un presentador de televisión.", "Inventá un nombre para un club imaginario y decí cuál sería su objetivo.", "Mirá la puerta y decile: \"Las compras impulsivas no pasan.\"", "Hacé un saludo militar a la alcancía antes de irte.", "Actuá como un científico que acaba de descubrir la moneda perfecta.", "Hacé una mini coreografía de 10 segundos.", "Hacé una conferencia motivacional de 30 segundos.", "Decí el alfabeto con voz de villano.", "Elegí un objeto que tengas cerca e inventá una historia sobre él.", "Inventá una moneda imaginaria y decí cómo se llamaría.", "Gritá: \"¡Cada peso tiene una misión!\"", "Presentate como \"Director General del Ahorro Inteligente\".", "Hacé como si una escoba fuera tu caballo.", "Decí tres razones para no comprar cosas innecesarias.", "Inventá una contraseña secreta para entrar al Banco de la Alcancía.", "Caminá como si el piso estuviera lleno de monedas.", "Elegí un objeto que tengas cerca e inventá qué aventura tuvo antes de llegar ahí.", "Inventá un premio absurdo y agradecé por haberlo ganado.", "Actuá como si encontraras un billete imaginario.", "Hacé un anuncio: \"Se busca moneda valiente para una gran misión.\"", "Elegí un objeto y declaralo \"Patrimonio Nacional del Ahorro\".", "Decile a la alcancía: \"Pronto vas a necesitar gimnasio.\"", "Hacé una cuenta regresiva desde 10 y festejá como si hubieras conseguido algo increíble.", "Mirá al cielo y agradecé por las monedas que vendrán.", "Fingí que inaugurás una sucursal del Banco de la Alcancía.", "Hacé una pose de estatua con una sonrisa enorme.", "Inventá un nombre para una moneda nueva.", "Presentate durante 10 segundos como si fueras el embajador de un país inventado.", "Caminá como un robot con batería baja durante un minuto.", "Gritá: \"¡No hay vuelta atrás, ahora se ahorra!\"", "Inventá un lema para poner en la alcancía.", "Hacé un mini discurso agradeciendo a quienes apoyan tu meta.", "Señalá la alcancía y decí: \"Ahí está mi próximo objetivo cumplido.\"", "Cerrá los ojos, levantá la alcancía (si podés) y gritá: \"¡Nos vemos cuando estés llena de monedas!\""]};
+</script>
+<script>
+(function(){
+  "use strict";
+
+  // ===== Variables de estado (equivalentes a las variables de escena de GDevelop) =====
+  const STORAGE_KEY = 'kista_ruleta_estado_v1';
+
+  const state = {
+    limiteDias: 7,
+    categoria: null,      // 'ninos' | 'escuela' | 'liceo' | 'general' | 'parejas'
+    numero: null,
+    prenda: null,
+    volteada: false,
+    paso: 'dias',         // 'dias' | 'categoria' | 'juego'
+    tirando: false,
+    vueltas: 0,
+    usados: [],           // números ya sorteados en la ronda actual (no se repiten)
+    prendasUsadas: []      // índices de prendas ya usadas en la ronda actual (por categoría)
+  };
+
+  const CATEGORIAS = [
+    { id:'ninos',   nombre:'Niños',   icon:'🧒', desc:'Prendas pensadas para niños' },
+    { id:'escuela', nombre:'Escuela', icon:'🎒', desc:'Prendas para la escuela' },
+    { id:'liceo',   nombre:'Liceo',   icon:'🎓', desc:'Prendas para el liceo' },
+    { id:'general', nombre:'General', icon:'🎲', desc:'Prendas para público general' },
+    { id:'parejas', nombre:'Parejas', icon:'💞', desc:'Prendas para compartir en pareja' },
+  ];
+
+  const QUICK_DAYS = [7,15,30,90,180,365];
+
+  const stage = document.getElementById('stage');
+
+  // ---------- Persistencia (localStorage) ----------
+  function guardarEstado(){
+    try{
+      const datos = {
+        limiteDias: state.limiteDias,
+        categoria: state.categoria,
+        numero: state.numero,
+        prenda: state.prenda,
+        volteada: state.volteada,
+        paso: state.paso,
+        usados: state.usados,
+        prendasUsadas: state.prendasUsadas
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(datos));
+    }catch(e){ /* si falla el guardado, seguimos sin persistencia */ }
+  }
+
+  function cargarEstado(){
+    try{
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if(!raw) return;
+      const datos = JSON.parse(raw);
+      if(typeof datos.limiteDias === 'number') state.limiteDias = datos.limiteDias;
+      if(datos.categoria && CATEGORIAS.some(c => c.id === datos.categoria)) state.categoria = datos.categoria;
+      if(typeof datos.numero === 'number' || datos.numero === null) state.numero = datos.numero;
+      if(typeof datos.prenda === 'string') state.prenda = datos.prenda;
+      if(typeof datos.volteada === 'boolean') state.volteada = datos.volteada;
+      if(Array.isArray(datos.usados)) state.usados = datos.usados;
+      if(Array.isArray(datos.prendasUsadas)) state.prendasUsadas = datos.prendasUsadas;
+      if(['dias','categoria','juego'].includes(datos.paso)){
+        // Solo restauramos el paso 'juego' si además hay categoría guardada
+        if(datos.paso !== 'juego' || state.categoria) state.paso = datos.paso;
+      }
+    }catch(e){ /* datos corruptos: seguimos con el estado por defecto */ }
+  }
+
+  // ---------- Sonido (Web Audio API, sin archivos externos) ----------
+  let audioCtx = null;
+  function getAudioCtx(){
+    try{
+      if(!audioCtx){
+        const AC = window.AudioContext || window.webkitAudioContext;
+        audioCtx = new AC();
+      }
+      if(audioCtx.state === 'suspended') audioCtx.resume();
+      return audioCtx;
+    }catch(e){ return null; }
+  }
+
+  function sonarTick(){
+    const ctx = getAudioCtx();
+    if(!ctx) return;
+    try{
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'square';
+      osc.frequency.value = 680;
+      gain.gain.setValueAtTime(0.05, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.05);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start();
+      osc.stop(ctx.currentTime + 0.06);
+    }catch(e){}
+  }
+
+  function sonarClickBoton(){
+    const ctx = getAudioCtx();
+    if(!ctx) return;
+    try{
+      const ahora = ctx.currentTime;
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'triangle';
+      // Pop simple y bien audible.
+      osc.frequency.setValueAtTime(500, ahora);
+      osc.frequency.exponentialRampToValueAtTime(220, ahora + 0.09);
+      gain.gain.setValueAtTime(0.001, ahora);
+      gain.gain.exponentialRampToValueAtTime(0.35, ahora + 0.012);
+      gain.gain.exponentialRampToValueAtTime(0.001, ahora + 0.12);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(ahora);
+      osc.stop(ahora + 0.13);
+    }catch(e){}
+  }
+
+  function sonarResultado(){
+    const ctx = getAudioCtx();
+    if(!ctx) return;
+    try{
+      const ahora = ctx.currentTime;
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'sine';
+      osc.frequency.value = 659.25;
+      gain.gain.setValueAtTime(0.0001, ahora);
+      gain.gain.exponentialRampToValueAtTime(0.16, ahora + 0.02);
+      gain.gain.exponentialRampToValueAtTime(0.0001, ahora + 0.3);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(ahora);
+      osc.stop(ahora + 0.32);
+    }catch(e){}
+  }
+
+  function sonarVictoria(){
+    const ctx = getAudioCtx();
+    if(!ctx) return;
+    try{
+      const ahora = ctx.currentTime;
+
+      // Arpegio ascendente de fanfarria
+      const notasArpegio = [523.25, 659.25, 783.99, 1046.50, 1318.51, 1567.98, 2093.00];
+      notasArpegio.forEach((freq, i) => {
+        const t = ahora + i*0.13;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.value = freq;
+        gain.gain.setValueAtTime(0.0001, t);
+        gain.gain.exponentialRampToValueAtTime(0.22, t + 0.02);
+        gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.3);
+        osc.connect(gain); gain.connect(ctx.destination);
+        osc.start(t); osc.stop(t + 0.32);
+      });
+
+      // Acorde final brillante y sostenido
+      const acordeStart = ahora + notasArpegio.length*0.13 + 0.05;
+      const acorde = [1046.50, 1318.51, 1567.98, 2093.00];
+      acorde.forEach((freq) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sawtooth';
+        osc.frequency.value = freq;
+        gain.gain.setValueAtTime(0.0001, acordeStart);
+        gain.gain.exponentialRampToValueAtTime(0.12, acordeStart + 0.05);
+        gain.gain.exponentialRampToValueAtTime(0.0001, acordeStart + 4.0);
+        osc.connect(gain); gain.connect(ctx.destination);
+        osc.start(acordeStart); osc.stop(acordeStart + 4.1);
+      });
+
+      // Destellos finales
+      const sparkleStart = acordeStart + 2.0;
+      [2093.00, 2637.02].forEach((freq, i) => {
+        const t = sparkleStart + i*0.2;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.value = freq;
+        gain.gain.setValueAtTime(0.0001, t);
+        gain.gain.exponentialRampToValueAtTime(0.18, t + 0.02);
+        gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.5);
+        osc.connect(gain); gain.connect(ctx.destination);
+        osc.start(t); osc.stop(t + 0.55);
+      });
+    }catch(e){}
+  }
+
+  // Sonido de click para todos los botones y tarjetas clickeables de la app.
+  document.addEventListener('click', (e) => {
+    const el = e.target.closest('button, .cat-card, .quick-btn');
+    if(el && !el.disabled){
+      sonarClickBoton();
+    }
+  });
+
+  // ---------- Utilidades ----------
+  function calcularAhorro(dias){
+    // Ahorro progresivo: día 1 = $1, día 2 = $2 ... día n = $n
+    // Suma total = n(n+1)/2
+    return dias * (dias + 1) / 2;
+  }
+
+  function formatMoney(monto){
+    return '$' + Math.round(monto).toLocaleString('es-AR');
+  }
+
+  function elegirNumero(){
+    // No repetir números dentro de la misma ronda de "limiteDias" días.
+    if(state.usados.length >= state.limiteDias){
+      state.usados = []; // se sortearon todos: se reinicia el ciclo
+    }
+    let candidato;
+    do{
+      candidato = 1 + Math.floor(Math.random() * state.limiteDias);
+    }while(state.usados.includes(candidato));
+    state.usados.push(candidato);
+    return candidato;
+  }
+
+  function elegirPrenda(categoriaId){
+    const lista = PRENDAS[categoriaId] || PRENDAS['general'];
+    if(!lista || lista.length === 0) return '';
+    // Prenda random por día, sin repetir hasta agotar la lista de la categoría.
+    if(state.prendasUsadas.length >= lista.length){
+      state.prendasUsadas = [];
+    }
+    let idx;
+    do{
+      idx = Math.floor(Math.random() * lista.length);
+    }while(state.prendasUsadas.includes(idx));
+    state.prendasUsadas.push(idx);
+    return lista[idx];
+  }
+
+  function render(){
+    if(state.paso === 'dias') renderPasoDias();
+    else if(state.paso === 'categoria') renderPasoCategoria();
+    else renderPasoJuego();
+  }
+
+  // ---------- PASO 1: DÍAS ----------
+  function renderPasoDias(){
+    stage.innerHTML = `
+      <div class="step active" id="stepDias">
+        <div class="step-title">¿Por cuántos días vas a jugar?</div>
+        <div class="step-subtitle">Elegí un número entre 1 y 365 días</div>
+
+        <div class="dias-display">
+          <span class="dias-num" id="diasNum">${state.limiteDias}</span>
+          <div class="dias-label">días</div>
+        </div>
+
+        <input type="range" id="diasSlider" min="1" max="365" value="${state.limiteDias}">
+
+        <div class="quick-grid" id="quickGrid">
+          ${QUICK_DAYS.map(d => `<button class="quick-btn${d===state.limiteDias?' selected':''}" data-dias="${d}">${d}</button>`).join('')}
+        </div>
+
+        <div class="ahorro-card">
+          <div class="ahorro-card-title">💰 Ahorro estimado</div>
+          <div class="ahorro-card-total" id="ahorroTotal">${formatMoney(calcularAhorro(state.limiteDias))}</div>
+          <div class="ahorro-card-sub">Ahorrando $1 más cada día, ¡juntarías esto en <span id="ahorroDiasTxt">${state.limiteDias}</span> días!</div>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn btn-primary" id="btnContinuar" style="flex:1;">Continuar</button>
+        </div>
+      </div>
+    `;
+
+    const numEl = document.getElementById('diasNum');
+    const slider = document.getElementById('diasSlider');
+    const quickBtns = document.querySelectorAll('.quick-btn');
+    const ahorroTotalEl = document.getElementById('ahorroTotal');
+    const ahorroDiasTxtEl = document.getElementById('ahorroDiasTxt');
+
+    function setDias(v, bump){
+      state.limiteDias = v;
+      state.usados = []; // cambiar la cantidad de días reinicia los números ya sorteados
+      numEl.textContent = v;
+      slider.value = v;
+      quickBtns.forEach(b => b.classList.toggle('selected', Number(b.dataset.dias) === v));
+      ahorroTotalEl.textContent = formatMoney(calcularAhorro(v));
+      ahorroDiasTxtEl.textContent = v;
+      if(bump){
+        numEl.classList.remove('bump');
+        void numEl.offsetWidth;
+        numEl.classList.add('bump');
+      }
+    }
+
+    slider.addEventListener('input', () => { setDias(Number(slider.value), false); guardarEstado(); });
+    quickBtns.forEach(btn => {
+      btn.addEventListener('click', () => { setDias(Number(btn.dataset.dias), true); guardarEstado(); });
+    });
+
+    document.getElementById('btnContinuar').addEventListener('click', () => {
+      state.paso = 'categoria';
+      guardarEstado();
+      render();
+    });
+  }
+
+  // ---------- PASO 2: CATEGORÍA ----------
+  function renderPasoCategoria(){
+    stage.innerHTML = `
+      <div class="step active" id="stepCategoria">
+        <div class="step-title">Elegí una categoría</div>
+        <div class="step-subtitle">¿Para qué ocasión vas a jugar?</div>
+
+        <div class="cat-grid" id="catGrid">
+          ${CATEGORIAS.map((c) => `
+            <div class="cat-card${state.categoria===c.id?' selected':''}" data-cat="${c.id}">
+              <span class="icon">${c.icon}</span>
+              <div class="cat-name">${c.nombre}</div>
+            </div>
+          `).join('')}
+        </div>
+
+        <div class="btn-row">
+          <button class="btn btn-ghost" id="btnVolver">Volver</button>
+          <button class="btn btn-primary" id="btnEmpezar" ${state.categoria ? '' : 'disabled'}>Empezar</button>
+        </div>
+      </div>
+    `;
+
+    document.querySelectorAll('.cat-card').forEach(card => {
+      card.addEventListener('click', () => {
+        if(state.categoria !== card.dataset.cat){
+          state.prendasUsadas = []; // nueva categoría: reiniciar prendas ya usadas
+        }
+        state.categoria = card.dataset.cat;
+        document.querySelectorAll('.cat-card').forEach(c => c.classList.remove('selected'));
+        card.classList.add('selected');
+        document.getElementById('btnEmpezar').disabled = false;
+        guardarEstado();
+      });
+    });
+
+    document.getElementById('btnVolver').addEventListener('click', () => {
+      state.paso = 'dias';
+      guardarEstado();
+      render();
+    });
+
+    document.getElementById('btnEmpezar').addEventListener('click', () => {
+      if(!state.categoria) return;
+      state.paso = 'juego';
+      state.numero = null;
+      state.prenda = null;
+      state.volteada = false;
+      state.usados = [];
+      guardarEstado();
+      render();
+    });
+  }
+
+  // ---------- PASO 3: JUGAR ----------
+  function renderPasoJuego(){
+    const cat = CATEGORIAS.find(c => c.id === state.categoria);
+    const totalPrendas = (PRENDAS[state.categoria] || PRENDAS['general']).length;
+
+    const diasRestantesInicial = Math.max(state.limiteDias - state.usados.length, 0);
+
+    stage.innerHTML = `
+      <div class="step active" id="stepJuego">
+        <div class="play-tag">${cat.icon} <b>${cat.nombre}</b> · ${totalPrendas} prendas · ${state.limiteDias} días</div>
+        <div class="dias-restantes" id="diasRestantes">Quedan <b>${diasRestantesInicial}</b> días por sortear</div>
+        <div class="regla-prenda">💡 Cada día ahorrás la plata que toque. Si ese día <b>no ahorrás</b>, tirás el dado y cumplís la prenda que te salga.</div>
+
+        <div class="roulette-wrap">
+          <div class="num-display" id="numDisplay">${state.numero ?? '?'}</div>
+
+          <button class="tirar-btn" id="btnTirar" ${state.tirando ? 'disabled' : ''}>
+            <span class="dado">🎲</span>
+            <span>Tirar</span>
+          </button>
+
+          <div class="card-scene${state.numero ? ' show' : ''}" id="cardScene">
+            <div class="card-inner${state.volteada ? ' flipped' : ''}" id="cardInner">
+              <div class="card-face card-front">
+                <div class="prenda-word">PRENDA</div>
+                <div class="tap-hint">Tocá para dar vuelta</div>
+              </div>
+              <div class="card-face card-back">
+                <div class="prenda-label">TU PRENDA</div>
+                <div class="prenda-text" id="prendaText">${state.prenda || ''}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="play-actions${state.numero ? '' : ' hidden'}" id="playActions">
+          <button class="btn btn-primary" id="btnTirarDeNuevo">Tirar de nuevo</button>
+          <button class="btn btn-ghost" id="btnCambiarOpciones">Cambiar opciones</button>
+        </div>
+      </div>
+
+      <div class="alcancia-overlay" id="alcanciaOverlay">
+        <div class="alcancia-card">
+          <span class="alcancia-emoji">🐷🎉</span>
+          <div class="alcancia-title">¡Llegó la hora de<br>abrir la alcancía!</div>
+          <div class="alcancia-text">Completaste los ${state.limiteDias} días. ¡Es momento de contar los ahorros!</div>
+          <button class="btn btn-primary" id="btnCerrarAlcancia">¡Genial!</button>
+        </div>
+      </div>
+    `;
+
+    const numDisplay = document.getElementById('numDisplay');
+    const btnTirar = document.getElementById('btnTirar');
+    const cardScene = document.getElementById('cardScene');
+    const cardInner = document.getElementById('cardInner');
+    const prendaText = document.getElementById('prendaText');
+    const playActions = document.getElementById('playActions');
+    const diasRestantesEl = document.getElementById('diasRestantes');
+    const alcanciaOverlay = document.getElementById('alcanciaOverlay');
+
+    document.getElementById('btnCerrarAlcancia').addEventListener('click', () => {
+      alcanciaOverlay.classList.remove('show');
+    });
+
+    function tirarDado(){
+      if(state.tirando) return;
+      getAudioCtx(); // desbloquea el audio en el gesto del usuario (click)
+      state.tirando = true;
+      state.volteada = false;
+      cardInner.classList.remove('flipped');
+      cardScene.classList.remove('show');
+      btnTirar.disabled = true;
+
+      // Secuencia de tiempos entre "vueltas": empieza rápido y se va frenando,
+      // como una ruleta real, para que se escuchen bien los últimos ticks.
+      const demoras = [60,60,65,70,75,85,95,105,120,135,150,170,190,210,235,260,290,320];
+      let paso = 0;
+
+      function siguienteVuelta(){
+        sonarTick();
+        const randomTemp = 1 + Math.floor(Math.random() * state.limiteDias);
+        numDisplay.textContent = randomTemp;
+        paso++;
+
+        if(paso < demoras.length){
+          setTimeout(siguienteVuelta, demoras[paso]);
+          return;
+        }
+
+        const numeroFinal = elegirNumero();
+        state.numero = numeroFinal;
+        state.prenda = elegirPrenda(state.categoria);
+
+        numDisplay.textContent = numeroFinal;
+        numDisplay.classList.remove('spring');
+        void numDisplay.offsetWidth;
+        numDisplay.classList.add('spring');
+
+        prendaText.textContent = state.prenda;
+        cardScene.classList.add('show');
+        playActions.classList.remove('hidden');
+
+        const diasRestantes = Math.max(state.limiteDias - state.usados.length, 0);
+        const cicloCompleto = diasRestantes === 0;
+        diasRestantesEl.innerHTML = cicloCompleto
+          ? '¡Sorteaste los ' + state.limiteDias + ' días! 🎊'
+          : 'Quedan <b>' + diasRestantes + '</b> días por sortear';
+
+        sonarResultado();
+        if(cicloCompleto){
+          setTimeout(() => {
+            alcanciaOverlay.classList.add('show');
+            sonarVictoria();
+          }, 500);
+        }
+
+        state.tirando = false;
+        btnTirar.disabled = false;
+        guardarEstado();
+      }
+
+      setTimeout(siguienteVuelta, demoras[0]);
+    }
+
+    btnTirar.addEventListener('click', tirarDado);
+
+    cardInner.addEventListener('click', () => {
+      if(!state.numero) return;
+      state.volteada = !state.volteada;
+      cardInner.classList.toggle('flipped', state.volteada);
+      guardarEstado();
+    });
+
+    document.getElementById('btnTirarDeNuevo').addEventListener('click', tirarDado);
+
+    document.getElementById('btnCambiarOpciones').addEventListener('click', () => {
+      state.paso = 'dias';
+      state.numero = null;
+      state.prenda = null;
+      state.volteada = false;
+      state.usados = [];
+      state.prendasUsadas = [];
+      guardarEstado();
+      render();
+    });
+  }
+
+  // ---------- Iniciar ----------
+  cargarEstado();
+  render();
+})();
+
+</script>
+</body>
+</html>
