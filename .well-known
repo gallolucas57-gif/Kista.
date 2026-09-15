@@ -1,8 +1,0 @@
-[{
-      "relation": ["delegate_permission/common.handle_all_urls"],
-      "target": {
-        "namespace": "android_app",
-        "package_name": "io.github.gallolucas57_gif.twa",
-        "sha256_cert_fingerprints": ["57:80:5E:CF:D2:B4:86:2C:90:3E:0C:37:D0:80:D9:9F:88:36:13:E3:7E:54:0F:C9:3C:4F:81:1B:D5:09:0D:9A"]
-      }
-    }]
