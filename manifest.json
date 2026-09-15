@@ -1,9 +1,9 @@
 {
-  "background_color": "#ff0000",
+  "background_color": "#f00000",
   "dir": "ltr",
   "display": "standalone",
   "name": "KISTA",
-  "orientation": "any",
+  "orientation": "portrait",
   "scope": "/",
   "short_name": "KISTA",
   "start_url": "/",
@@ -21,7 +21,5 @@
       "is192x192": false
     }
   ],
-  "lang": "es",
-  "id": "1234",
-  "description": "kistaap"
+  "lang": "es"
 }
