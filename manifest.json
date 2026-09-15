@@ -1,12 +1,12 @@
 {
   "background_color": "#f00000",
   "dir": "ltr",
-  "display": "standalone",
+  "display": "fullscreen",
   "name": "KISTA",
   "orientation": "portrait",
-  "scope": "/",
+  "scope": "https://gallolucas57-gif.github.io/Kista./",
   "short_name": "KISTA",
-  "start_url": "/",
+ "start_url": "https://gallolucas57-gif.github.io/Kista./",
   "theme_color": "#ff0000",
 "icons": [
  {
